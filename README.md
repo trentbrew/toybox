@@ -70,7 +70,7 @@ Working with icons can be a whole thing. You have to find the right icon, downlo
 
 ## Usage
 
-- You can use the API to fetch icons. The API is available at `https://iconicui.vercel.app/api/icons`. The API returns the following JSON:
+- You can use the API to fetch icons. The API is available at [iconicui.vercel.app/api/icons](https://iconicui.vercel.app/api/icons). The API returns the following JSON:
 
 ```json
 {
