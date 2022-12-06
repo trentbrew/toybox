@@ -56,7 +56,7 @@ Working with icons can be a whole thing. You have to find the right icon, downlo
 
 ### Adding Icons
 
-- Icons are stored in `./data/icons.js`. Insert an icon to the object using the following format:
+- Icons are stored in `./data/icons.js`. Insert an icon using the following format:
 
 ```js
 {
