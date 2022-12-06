@@ -23,7 +23,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Templatåçe">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="assets/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Best-README-Template</h3>
@@ -71,7 +71,7 @@
 
 ## About The Project
 
-<img src="images/screengrab.png" alt="Screenshot" />
+<img src="assets/images/screenshot.png" alt="Screenshot" />
 
 Working with icons can be a whole thing. You have to find the right icon, download it, and then use it in your project. This is a pain. We want to make it easier for you to use icons in your projects. Iconic aims to make this process easier by providing a simple API to fetch SVGs and render them in your project.
 
@@ -98,7 +98,7 @@ Working with icons can be a whole thing. You have to find the right icon, downlo
 
 ## Usage
 
-- You can use the API to fetch icons. The API is available at `https://iconic-6cxx03wre-trent-brew.vercel.app/api/icons/:icon`. The API returns the following JSON:
+- You can use the API to fetch icons. The API is available at `https://iconicui.vercel.app/api/icons`. The API returns the following JSON:
 
 ```json
 {
@@ -125,7 +125,7 @@ const props = defineProps({
 });
 
 const { data: svg } = api.get(
-  `http://iconic.turtlelabs.co/api/icons/${props.name}`
+  `http://iconicui.vercel.app/api/icons/${props.name}`
 );
 </script>
 
