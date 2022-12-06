@@ -1,0 +1,67 @@
+/* ------------ custom ------------ */
+
+.fullscreen {
+  height: calc(100vh - 80px);
+  width: 100vw;
+}
+
+.image-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.image-fixed {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.image-contain {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.flexx {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ease-circ {
+  transition: all 0.5s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.loading {
+	animation: loading 1s steps(8, end) infinite;
+}
+
+@keyframes loading {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* ------------ tailwind ------------ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------ global ------------ */
+
+h1 {
+  font-size: 1.5rem;
+  width: 100%;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
