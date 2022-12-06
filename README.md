@@ -26,7 +26,7 @@
     <img src="assets/images/logo_alt.png" alt="Logo" width="80" height="80" />
   </a>
 
-  <h1 align="center">Iconic</h1>
+  <h2 align="center">Iconic</h2>
 
   <p align="center">
     A simple icon API
