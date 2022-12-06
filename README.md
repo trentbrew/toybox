@@ -26,10 +26,10 @@
     <img src="assets/images/logo_alt.png" alt="Logo" width="80" height="80" />
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Iconic</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    A simple icon API
     <br />
     <!-- <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br /> -->
