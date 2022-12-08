@@ -21,11 +21,11 @@
 </script>
 
 <template>
-  <div class="overflow-x-auto z-0">
+  <div class="overflow-x-auto z-0 rounded-xl">
     <table class="table w-full">
       <thead>
         <tr>
-          <th class="text-primary-content/40">#</th>
+          <th class="text-base-content/30">#</th>
           <th v-for="(key, keyIndex) in keys" :key="keyIndex">{{ key }}</th>
         </tr>
       </thead>
@@ -35,7 +35,7 @@
           :key="itemIndex"
           class="hover cursor-pointer"
         >
-          <th class="font-normal text-[#ffffff24]">{{ itemIndex }}</th>
+          <th class="font-normal text-base-content/30">{{ itemIndex }}</th>
           <td
             v-for="(datum, datumIndex) in Object.entries(item)"
             :key="datumIndex"

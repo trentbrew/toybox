@@ -1,5 +1,3 @@
-import { makeConsoleLogger } from '@notionhq/client/build/src/logging'
-
 export const useGlobalStore = defineStore('global', {
   state: () => ({
     ui: {

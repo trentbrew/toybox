@@ -3,55 +3,59 @@
     testData: [
       {
         name: 'Lauren',
-        age: 23,
         birthday: '01/04/1999',
+        age: 23,
       },
       {
-        name: 'Trent',
-        age: 25,
+        name: 'Trenton',
         birthday: '10/23/1997',
+        age: 25,
       },
       {
         name: 'Derrck',
-        age: 27,
         birthday: '11/22/1995',
+        age: 27,
       },
       {
         name: 'Candice',
-        age: 28,
         birthday: '05/05/1994',
+        age: 28,
       },
     ],
   })
 </script>
 
 <template>
-  <main>
-    <section>
-      <h1>Table.vue</h1>
-      <Table :data="state.testData" class="max-w-[50%]" />
-    </section>
-    <section>
-      <h1>Loader.vue</h1>
-      <div class="grid grid-cols-4 gap-x-12">
-        <Loader type="1" size="32" />
-        <Loader type="2" size="32" />
-        <Loader type="3" size="32" />
-        <Loader type="4" size="32" />
-        <Loader type="5" size="32" />
-        <Loader type="6" size="32" />
-        <Loader type="7" size="32" />
-        <Loader type="8" size="32" />
-      </div>
-    </section>
+  <main class="w-full grid grid-cols-2">
+    <div id="left">
+      <section>
+        <h1>Table.vue</h1>
+        <Table :data="state.testData" class="w-full" />
+      </section>
+      <section>
+        <h1>Loader.vue</h1>
+        <div class="grid grid-cols-4 gap-x-12">
+          <Loader type="1" size="32" />
+          <Loader type="2" size="32" />
+          <Loader type="3" size="32" />
+          <Loader type="4" size="32" />
+          <Loader type="5" size="32" />
+          <Loader type="6" size="32" />
+          <Loader type="7" size="32" />
+          <Loader type="8" size="32" />
+        </div>
+      </section>
+    </div>
+
+    <div id="right"></div>
   </main>
 </template>
 
 <style scoped>
   h1 {
-    @apply w-full text-center mb-24 font-normal;
+    @apply w-full text-center mb-12 font-normal;
   }
   section {
-    @apply flex flex-col justify-center items-center mb-40;
+    @apply flex flex-col justify-center mb-12 items-center bg-base-300 p-12 rounded-3xl;
   }
 </style>

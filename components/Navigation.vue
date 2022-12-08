@@ -13,7 +13,7 @@
 </script>
 
 <template>
-  <nav class="fixed navbar pr-4 py-4 z-10 bg-base-300">
+  <nav class="fixed navbar pr-4 py-4 z-10 bg-neutral/75 backdrop-blur-xl">
     <div class="navbar-start w-auto">
       <NuxtLink
         id="logo"
@@ -50,7 +50,7 @@
         v-model="state.search"
         type="text"
         aria-label="Search icon"
-        class="input input-lg pl-16 rounded-box w-full bg-base-100 focus:!outline-none text-base-content"
+        class="input input-lg pl-16 rounded-box w-full bg-base-200 focus:!outline-none text-base-content"
         :class="route.path !== '/icons' && 'scale-95'"
       />
     </div>
