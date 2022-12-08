@@ -1,5 +1,7 @@
 <script setup></script>
 
 <template>
-  <div>Index</div>
+  <main>
+    <h1 class="w-full text-center">👋🏾 Welcome</h1>
+  </main>
 </template>

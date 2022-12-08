@@ -1,5 +1,7 @@
 <script setup></script>
 
 <template>
-  <div>Components</div>
+  <main>
+    <h1 class="w-full text-center">Components</h1>
+  </main>
 </template>

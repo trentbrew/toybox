@@ -12,7 +12,7 @@ watch(() => state.search, (val) => global.updateQuery(val))
 <template>
   <nav class="fixed navbar pr-4 py-4 z-10 bg-transparent" style="border-bottom: 1px solid rgba(255,255,255,0.16) !important; backdrop-filter: blur(32px)">
     <div class="navbar-start w-auto">
-      <NuxtLink to="/" class="btn btn-ghost hover:bg-transparent hover:opacity-50">
+      <NuxtLink id="logo" to="/" class="btn btn-ghost hover:bg-transparent hover:opacity-50">
         <img src="../assets/images/logo.png" class="w-10 h-10" />
       </NuxtLink>
       <ul class="menu menu-horizontal min-w-fit">
@@ -37,7 +37,7 @@ watch(() => state.search, (val) => global.updateQuery(val))
     <div class="navbar-end hidden lg:flex w-auto">
       <ul class="menu menu-horizontal">
         <li class="dropdown dropdown-bottom dropdown-end cursor-pointer">
-          <label tabindex="0" class="flex items-center gap-1 cursor-pointer pr-2 !rounded-box">
+          <label tabindex="0" class="flex items-center gap-1 cursor-pointer pr-2 hover:bg-transparent">
             <Icon name="swatch" />
             <Icon name="dropdown" class="opacity-50" />
           </label>
@@ -60,13 +60,13 @@ watch(() => state.search, (val) => global.updateQuery(val))
 </template>
 
 <style scoped>
-  li a {
-    @apply opacity-[0.4] rounded active:bg-base-100 active:text-white;
+  #logo {
+    @apply bg-transparent;
+  }
+  li, li a {
+    @apply text-primary-content/40 rounded active:bg-base-200;
   }
   .router-link-exact-active {
-    @apply opacity-100 bg-transparent text-white;
-  }
-  #github-link {
-    opacity: 1 !important;
+    @apply !text-primary-content bg-transparent;
   }
 </style>

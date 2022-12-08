@@ -35,9 +35,8 @@ watch(() => global.query, (val) => {
 </script>
 
 <template>
-  <div>
-    <main class="w-full p-16">
-      <ul class="w-full grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-4 mt-20">
+    <main>
+      <ul class="w-full grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-4">
         <div v-for="(icon, index) in filtered" :key="index" aria-role="button" :aria-label="`Download ${icon.name}`">
           <li @click="downloadSVG(icon)" class="w-full flex justify-between items-center rounded-box p-4 border border-[rgba(255,255,255,0.2)] cursor-pointer hover:border-white group" style="transition: 0ms">
             <div class="left flex items-center gap-5">
@@ -59,8 +58,4 @@ watch(() => global.query, (val) => {
         </h3>
       </div>
     </main>
-    <!-- <div v-if="filtered.length" class="w-full h-8 bg-white text-black text-sm flexx">
-      <span>Developed with ♡ by&nbsp;</span><a href="https://trentbrew.com" target="_blank" class="font-bold">Trent Brew</a>
-    </div> -->
-  </div>
 </template>
