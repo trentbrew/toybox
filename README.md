@@ -10,17 +10,9 @@
   </p>
 </div>
 
-## About The Project
+## About
 
-<!-- <img src="assets/images/screenshot.png" alt="Screenshot" />
-
-Working with icons can be a whole thing. You have to find the right icon, download it, and then use it in your project. This is a pain. We want to make it easier for you to use icons in your projects. Iconic aims to make this process easier by providing a simple API to fetch SVGs and render them in your project. -->
-
-### Built With
-
-- [Nuxt](https://nuxt.com/docs/getting-started/introduction)
-- [TailwindCSS](https://tailwindcss.com/docs)
-- [DaisyUI](https://daisyui.com/components)
+Toybox is a collection of UI components and icons for web and mobile apps built with [Nuxt](https://nuxt.com/docs/getting-started/introduction) and [TailwindCSS](https://tailwindcss.com/docs).
 
 ## Icons
 
