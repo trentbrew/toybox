@@ -19,7 +19,9 @@
   })
 
   const size = computed(() => {
-    return `${props.size}px`
+    return props.type == 4
+      ? `${props.size >= 24 ? props.size - 8 : props.size}px`
+      : `${props.size}px`
   })
 </script>
 
