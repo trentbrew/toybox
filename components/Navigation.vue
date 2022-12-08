@@ -13,7 +13,7 @@
 </script>
 
 <template>
-  <nav class="fixed navbar pr-4 py-4 z-10 bg-base-100/80 backdrop-blur-lg">
+  <nav class="fixed navbar pr-4 py-4 z-10 bg-base-300">
     <div class="navbar-start w-auto">
       <NuxtLink
         id="logo"
@@ -37,16 +37,16 @@
     </div>
     <div class="w-full ml-8 mr-6 flex justify-center">
       <label
-        class="duration-150"
+        class="!duration-150"
         :class="route.path !== '/icons' && 'opacity-0'"
       >
-        <Icon name="search" class="opacity-30 translate-x-[46px]" />
+        <Icon name="search" class="translate-x-[46px] text-base-content" />
       </label>
       <input
         v-model="state.search"
         type="text"
         aria-label="Search icons"
-        class="input input-lg pl-16 rounded-box w-full bg-base-300 focus:!outline-none text-white"
+        class="input input-lg pl-16 rounded-box w-full bg-base-100 focus:!outline-none text-base-content"
         :class="
           route.path !== '/icons' && 'pointer-events-none opacity-0 scale-90'
         "
@@ -54,53 +54,33 @@
     </div>
     <div class="navbar-end hidden lg:flex w-auto">
       <ul class="menu menu-horizontal">
-        <li class="dropdown dropdown-bottom dropdown-end cursor-pointer">
+        <li
+          class="dropdown dropdown-bottom dropdown-end cursor-pointer !rounded-box"
+        >
           <label
             tabindex="0"
-            class="flex items-center gap-1 cursor-pointer pr-2 hover:bg-transparent"
+            class="flex items-center gap-1 cursor-pointer pr-2 hover:bg-transparent !rounded-box"
           >
-            <Icon name="swatch" />
+            <Icon name="swatch" class="text-neutral-content" />
             <Icon name="dropdown" class="opacity-50" />
           </label>
           <ul
             tabindex="0"
             class="dropdown-content menu p-2 shadow bg-base-300 rounded-box w-56"
           >
-            <li
-              :class="`w-full ${
-                global.theme == 'dark' ? 'font-bold opacity-100' : 'opacity-50'
-              } `"
-            >
+            <li>
               <button @click="global.setTheme('dark')">Dark</button>
             </li>
-            <li
-              :class="`w-full ${
-                global.theme == 'night' ? 'font-bold opacity-100' : 'opacity-50'
-              } `"
-            >
+            <li>
               <button @click="global.setTheme('night')">Night</button>
             </li>
-            <li
-              :class="`w-full ${
-                global.theme == 'black' ? 'font-bold opacity-100' : 'opacity-50'
-              } `"
-            >
+            <li>
               <button @click="global.setTheme('black')">Black</button>
             </li>
-            <li
-              :class="`w-full ${
-                global.theme == 'coffee'
-                  ? 'font-bold opacity-100'
-                  : 'opacity-50'
-              } `"
-            >
+            <li>
               <button @click="global.setTheme('coffee')">Coffee</button>
             </li>
-            <li
-              :class="`w-full ${
-                global.theme == 'aqua' ? 'font-bold opacity-100' : 'opacity-50'
-              } `"
-            >
+            <li>
               <button @click="global.setTheme('aqua')">Aqua</button>
             </li>
           </ul>
@@ -112,7 +92,7 @@
             target="_blank"
             class="!rounded-box pl-4"
           >
-            <Icon name="github" />
+            <Icon name="github" class="text-neutral-content" />
           </a>
         </li>
       </ul>
@@ -130,5 +110,8 @@
   }
   .router-link-exact-active {
     @apply !text-neutral-content bg-transparent;
+  }
+  .dropdown-content {
+    @apply !text-base-content;
   }
 </style>

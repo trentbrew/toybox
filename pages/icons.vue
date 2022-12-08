@@ -54,21 +54,20 @@
       >
         <li
           @click="downloadSVG(icon)"
-          class="w-full flex justify-between items-center rounded-box p-4 border border-[rgba(255,255,255,0.2)] cursor-pointer hover:border-white group"
+          class="w-full flex justify-between items-center rounded-box p-6 bg-base-200 hover:bg-base-300 hover:scale-[1.02] cursor-pointer group !duration-150 active:scale-[0.95] active:bg-base-200"
           style="transition: 0ms"
         >
-          <div class="left flex items-center gap-5">
-            <div v-html="icon.data"></div>
+          <div class="left flex items-center gap-3">
+            <div v-html="icon.data" class="text-base-content"></div>
             <span class="opacity-50 group-hover:opacity-100">{{
               icon.name
             }}</span>
           </div>
           <div
-            class="opacity-0 group-hover:opacity-100"
-            style="transition: 0ms"
+            class="opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100 !duration-75 w-6 h-6 flex justify-center items-cenmter"
           >
             <Icon v-if="!state.downloading" name="download" />
-            <Loader v-else type="4" size="24" class="accent-content" />
+            <Loader v-else type="3" size="24" class="accent-content" />
           </div>
         </li>
         <a

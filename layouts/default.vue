@@ -10,7 +10,7 @@
       :title="global.title"
       :subtitle="global.subtitle"
     />
-    <div class="p-16 pt-[160px]">
+    <div class="p-12 pt-[140px]">
       <NuxtPage />
     </div>
   </div>
