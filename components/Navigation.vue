@@ -14,20 +14,20 @@ watch(() => state.search, (val) => global.updateQuery(val))
       </NuxtLink>
       <ul class="menu menu-horizontal">
         <li>
-          <NuxtLink href="/components" target="_blank" class="rounded-box">
+          <NuxtLink href="/components" class="rounded-box">
             <span>Components</span>
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/icons" target="_blank" class="rounded-box">
+          <NuxtLink to="/icons" class="rounded-box">
             <span>Icons</span>
           </NuxtLink>
         </li>
       </ul>
     </div>
     <div class="w-full mr-6 flex justify-center">
-      <label><Icon name="search" class="translate-x-12" /></label>
-      <input v-model="state.search" type="text" aria-label="Search icons" placeholder="Search icons" class="input input-bordered input-lg pl-16 rounded-box w-full bg-transparent active:outline-none" style="transition: 75ms" />
+      <label><Icon name="search" class="translate-x-[46px]" /></label>
+      <input v-model="state.search" type="text" aria-label="Search icons" placeholder="Search icons" class="input input-bordered pl-16 rounded-box w-full bg-transparent active:outline-none" style="transition: 75ms" />
     </div>
     <div class="navbar-end hidden lg:flex w-auto">
       <ul class="menu menu-horizontal">
@@ -43,11 +43,21 @@ watch(() => state.search, (val) => global.updateQuery(val))
           </ul>
         </li>
         <li>
-          <a href="https://github.com/trentbrew/toybox" target="_blank" class="rounded-box">
-            <Icon name="github" />
-          </a>
+          <a id="github-link" href="https://github.com/trentbrew/toybox" target="_blank" class="rounded-box"><Icon name="github" /></a>
         </li>
       </ul>
     </div>
   </nav>
 </template>
+
+<style scoped>
+  li a {
+    @apply opacity-[0.4] rounded active:bg-base-100 active:text-white
+  }
+  .router-link-exact-active {
+    @apply opacity-[1] bg-transparent
+  }
+  #github-link {
+    opacity: 1 !important;
+  }
+</style>
