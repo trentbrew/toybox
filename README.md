@@ -12,7 +12,7 @@
 
 ## About
 
-Toybox is a collection of UI components and icons for web and mobile apps built with [Nuxt](https://nuxt.com/docs/getting-started/introduction) and [TailwindCSS](https://tailwindcss.com/docs).
+Toybox is a collection of components and icons for quickly building playful UIs for the web. Toybox is built with [Nuxt](https://nuxt.com/docs/getting-started/introduction) and [TailwindCSS](https://tailwindcss.com/docs).
 
 ## Icons
 
