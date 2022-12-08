@@ -1,13 +1,13 @@
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Templatåçe">
+  <!-- <a href="https://github.com/othneildrew/Best-README-Templatåçe">
     <img src="assets/images/logo_alt.png" alt="Logo" width="80" height="80" />
-  </a>
+  </a> -->
 
-  <h3 align="center">Iconic</h3>
+  <h3 align="center">Toybox</h3>
 
   <p align="center">
-    A simple icon API
+    Components and icons for playful UIs
     <br />
     <!-- <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br /> -->
@@ -20,9 +20,9 @@
 
 ## About The Project
 
-<img src="assets/images/screenshot.png" alt="Screenshot" />
+<!-- <img src="assets/images/screenshot.png" alt="Screenshot" />
 
-Working with icons can be a whole thing. You have to find the right icon, download it, and then use it in your project. This is a pain. We want to make it easier for you to use icons in your projects. Iconic aims to make this process easier by providing a simple API to fetch SVGs and render them in your project.
+Working with icons can be a whole thing. You have to find the right icon, download it, and then use it in your project. This is a pain. We want to make it easier for you to use icons in your projects. Iconic aims to make this process easier by providing a simple API to fetch SVGs and render them in your project. -->
 
 ### Built With
 
@@ -30,7 +30,7 @@ Working with icons can be a whole thing. You have to find the right icon, downlo
 - [TailwindCSS](https://tailwindcss.com/docs)
 - [DaisyUI](https://daisyui.com/components)
 
-## Usage
+## Icons
 
 - You can use the API to fetch icons. The API is available at [iconicui.vercel.app/api/icons](https://iconicui.vercel.app/api/icons). The API returns the following JSON:
 
@@ -42,7 +42,7 @@ Working with icons can be a whole thing. You have to find the right icon, downlo
 }
 ```
 
-## Example Component (Nuxt)
+## Example Icon Component (Nuxt)
 
 ```vue
 <script setup>

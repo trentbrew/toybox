@@ -1,13 +1,13 @@
 export const useGlobalStore = defineStore('global', {
   state: () => ({
-    theme: 'black',
+    ui_theme: 'black',
   }),
   getters: {
-    getTheme: (state) => state.theme,
+    theme: (state) => state.ui_theme,
   },
   actions: {
     setTheme(theme) {
-      this.theme = theme
-    }
+      this.ui_theme = theme
+    },
   }
 })
