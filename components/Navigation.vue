@@ -8,11 +8,9 @@ watch(() => state.search, (val) => global.updateQuery(val))
   <nav class="fixed navbar px-16 py-4 z-10 bg-transparent" style="border-bottom: 1px solid rgba(255,255,255,0.16) !important; backdrop-filter: blur(32px)">
     <div class="navbar-start w-auto">
       <NuxtLink to="/" class="btn btn-ghost normal-case text-xl">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M36 0H0V36H7.2V21.6H14.4V36H36V0ZM7.2 7.2H14.4V14.4H7.2V7.2Z" fill="white"/>
-        </svg>
+        <img src="../assets/images/logo.png" class="w-10 h-10" />
       </NuxtLink>
-      <ul class="menu menu-horizontal">
+      <ul class="menu menu-horizontal min-w-fit">
         <li>
           <NuxtLink href="/components" class="rounded-box">
             <span>Components</span>
@@ -25,7 +23,7 @@ watch(() => state.search, (val) => global.updateQuery(val))
         </li>
       </ul>
     </div>
-    <div class="w-full mr-6 flex justify-center">
+    <div class="w-full mx-8 flex justify-center">
       <label><Icon name="search" class="translate-x-[46px]" /></label>
       <input v-model="state.search" type="text" aria-label="Search icons" placeholder="Search icons" class="input input-bordered pl-16 rounded-box w-full bg-transparent active:outline-none" style="transition: 75ms" />
     </div>
