@@ -85,31 +85,31 @@
             class="dropdown-content menu p-2 shadow bg-base-300 rounded-box w-56"
           >
             <li>
+              <button @click="global.setTheme('cupcake')">Cupcake</button>
+            </li>
+            <li>
               <button @click="global.setTheme('dark')">Dark</button>
-            </li>
-            <li>
-              <button @click="global.setTheme('night')">Night</button>
-            </li>
-            <li>
-              <button @click="global.setTheme('black')">Black</button>
-            </li>
-            <li>
-              <button @click="global.setTheme('coffee')">Coffee</button>
-            </li>
-            <li>
-              <button @click="global.setTheme('aqua')">Aqua</button>
             </li>
             <li>
               <button @click="global.setTheme('lofi')">Lofi</button>
             </li>
             <li>
-              <button @click="global.setTheme('cupcake')">Cupcake</button>
+              <button @click="global.setTheme('night')">Night</button>
+            </li>
+            <li>
+              <button @click="global.setTheme('aqua')">Aqua</button>
+            </li>
+            <li>
+              <button @click="global.setTheme('coffee')">Coffee</button>
             </li>
             <li>
               <button @click="global.setTheme('emerald')">Emerald</button>
             </li>
             <li>
               <button @click="global.setTheme('retro')">Retro</button>
+            </li>
+            <li>
+              <button @click="global.setTheme('black')">Black</button>
             </li>
           </ul>
         </li>

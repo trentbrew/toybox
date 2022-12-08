@@ -1,7 +1,7 @@
 export const useGlobalStore = defineStore('global', {
   state: () => ({
     ui: {
-      theme: 'lofi',
+      theme: 'cupcake',
     },
     search: {
       query: '',
