@@ -1,17 +1,21 @@
-import { makeConsoleLogger } from "@notionhq/client/build/src/logging"
+import { makeConsoleLogger } from '@notionhq/client/build/src/logging'
 
 export const useGlobalStore = defineStore('global', {
   state: () => ({
     ui: {
       theme: 'dark',
     },
+    page: {
+      title: 'Greetings',
+      subtitle: 'This is some text from the global store',
+    },
     search: {
       query: '',
-    }
+    },
   }),
   getters: {
-    theme: (state) => state.ui.theme,
-    query: (state) => state.search.query,
+    theme: state => state.ui.theme,
+    query: state => state.search.query,
   },
   actions: {
     setTheme(theme) {
@@ -20,6 +24,6 @@ export const useGlobalStore = defineStore('global', {
     updateQuery(query) {
       console.log('updateQuery: ', query)
       this.search.query = query
-    }
-  }
+    },
+  },
 })

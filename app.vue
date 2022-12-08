@@ -1,5 +1,5 @@
 <script setup>
-const global = useGlobalStore()
+  const global = useGlobalStore()
 </script>
 
 <template>
