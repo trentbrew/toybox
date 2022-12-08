@@ -34,14 +34,14 @@
     <section>
       <h1>Loader.vue</h1>
       <div class="grid grid-cols-4 gap-x-12">
-        <Loader type="1" color="white" size="32" />
-        <Loader type="2" color="white" size="32" />
-        <Loader type="3" color="white" size="32" />
-        <Loader type="4" color="white" size="32" />
-        <Loader type="5" color="white" size="32" />
-        <Loader type="6" color="white" size="32" />
-        <Loader type="7" color="white" size="32" />
-        <Loader type="8" color="white" size="32" />
+        <Loader type="1" size="32" />
+        <Loader type="2" size="32" />
+        <Loader type="3" size="32" />
+        <Loader type="4" size="32" />
+        <Loader type="5" size="32" />
+        <Loader type="6" size="32" />
+        <Loader type="7" size="32" />
+        <Loader type="8" size="32" />
       </div>
     </section>
   </main>
