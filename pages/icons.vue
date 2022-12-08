@@ -59,8 +59,8 @@ watch(() => global.query, (val) => {
         </h3>
       </div>
     </main>
-    <div v-if="filtered.length" class="w-full h-8 bg-white text-black text-sm flexx">
+    <!-- <div v-if="filtered.length" class="w-full h-8 bg-white text-black text-sm flexx">
       <span>Developed with ♡ by&nbsp;</span><a href="https://trentbrew.com" target="_blank" class="font-bold">Trent Brew</a>
-    </div>
+    </div> -->
   </div>
 </template>
