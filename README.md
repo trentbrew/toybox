@@ -4,17 +4,15 @@
     <img src="assets/images/logo_alt.png" alt="Logo" width="80" height="80" />
   </a> -->
 
-  <h3 align="center">Toybox</h3>
+  <h1>Toybox</h1>
 
   <p align="center">
-    Components and icons for playful UIs
     <br />
-    <!-- <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br /> -->
-    <br />
-    <a href="https://iconic.turtlelabs.co">Icons</a>
+    <a href="https://toybox.design">Components</a>
     &nbsp·&nbsp
-    <a href="https://iconic.turtlelabs.co/api/icons">API</a>
+    <a href="https://toybox.design/icons">Icons</a>
+    &nbsp·&nbsp
+    <a href="https://toybox.design/api/v1/icons">API</a>
   </p>
 </div>
 
@@ -32,7 +30,7 @@ Working with icons can be a whole thing. You have to find the right icon, downlo
 
 ## Icons
 
-- You can use the API to fetch icons. The API is available at [iconicui.vercel.app/api/icons](https://iconicui.vercel.app/api/icons). The API returns the following JSON:
+- You can use the API to fetch icons. The API is available at [toybox.design/api/v1/icons](https://toybox.design/api/v1/icons). The API returns the following JSON:
 
 ```json
 {
