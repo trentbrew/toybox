@@ -35,21 +35,23 @@
         </li>
       </ul>
     </div>
-    <div class="w-full ml-8 mr-6 flex justify-center">
-      <label
-        class="!duration-150"
-        :class="route.path !== '/icons' && 'opacity-0'"
-      >
-        <Icon name="search" class="translate-x-[46px] text-base-content" />
+    <div
+      class="w-full ml-8 mr-6 flex justify-center !duration-300"
+      :class="route.path !== '/icons' && 'pointer-events-none opacity-0'"
+    >
+      <label>
+        <Icon
+          name="search"
+          class="translate-x-[46px] text-base-content !duration-150"
+          :class="route.path !== '/icons' && 'translate-x-[64px] opacity-0'"
+        />
       </label>
       <input
         v-model="state.search"
         type="text"
-        aria-label="Search icons"
+        aria-label="Search icon"
         class="input input-lg pl-16 rounded-box w-full bg-base-100 focus:!outline-none text-base-content"
-        :class="
-          route.path !== '/icons' && 'pointer-events-none opacity-0 scale-90'
-        "
+        :class="route.path !== '/icons' && 'scale-95'"
       />
     </div>
     <div class="navbar-end hidden lg:flex w-auto">
