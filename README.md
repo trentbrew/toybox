@@ -1,13 +1,7 @@
 <br />
 <div align="center">
-  <!-- <a href="https://github.com/othneildrew/Best-README-Templatåçe">
-    <img src="assets/images/logo_alt.png" alt="Logo" width="80" height="80" />
-  </a> -->
-
   <h1>Toybox</h1>
-
   <p align="center">
-    <br />
     <a href="https://toybox.design">Components</a>
     &nbsp·&nbsp
     <a href="https://toybox.design/icons">Icons</a>
