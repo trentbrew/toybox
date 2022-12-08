@@ -5,9 +5,9 @@ watch(() => state.search, (val) => global.updateQuery(val))
 </script>
 
 <template>
-  <nav class="fixed navbar px-16 py-4 z-10 bg-transparent" style="border-bottom: 1px solid rgba(255,255,255,0.16) !important; backdrop-filter: blur(32px)">
+  <nav class="fixed navbar pr-4 py-4 z-10 bg-transparent" style="border-bottom: 1px solid rgba(255,255,255,0.16) !important; backdrop-filter: blur(32px)">
     <div class="navbar-start w-auto">
-      <NuxtLink to="/" class="btn btn-ghost normal-case text-xl">
+      <NuxtLink to="/" class="btn btn-ghost hover:bg-transparent hover:opacity-50">
         <img src="../assets/images/logo.png" class="w-10 h-10" />
       </NuxtLink>
       <ul class="menu menu-horizontal min-w-fit">
@@ -23,25 +23,29 @@ watch(() => state.search, (val) => global.updateQuery(val))
         </li>
       </ul>
     </div>
-    <div class="w-full mx-8 flex justify-center">
+    <div class="w-full ml-8 mr-6 flex justify-center">
       <label><Icon name="search" class="translate-x-[46px]" /></label>
-      <input v-model="state.search" type="text" aria-label="Search icons" placeholder="Search icons" class="input input-bordered pl-16 rounded-box w-full bg-transparent active:outline-none" style="transition: 75ms" />
+      <input v-model="state.search" type="text" aria-label="Search icons" placeholder="Search icons" class="input input-bordered pl-16 rounded-box w-full bg-transparent active:outline-none" />
     </div>
     <div class="navbar-end hidden lg:flex w-auto">
       <ul class="menu menu-horizontal">
         <li class="dropdown dropdown-bottom dropdown-end cursor-pointer">
-          <label tabindex="0" class="flex items-center gap-3 cursor-pointer rounded-box">
+          <label tabindex="0" class="flex items-center gap-1 cursor-pointer pr-2 !rounded-box">
             <Icon name="swatch" />
+            <Icon name="dropdown" class="opacity-50" />
           </label>
-          <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-300 rounded-md w-56">
-            <li :class="`w-full ${ global.theme == 'black' ? 'font-bold opacity-100' : 'opacity-50' } `"><button @click="global.setTheme('black')">Black</button></li>
+          <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-300 rounded-box w-56">
+            <li :class="`w-full ${ global.theme == 'dark' ? 'font-bold opacity-100' : 'opacity-50' } `"><button @click="global.setTheme('dark')">Dark</button></li>
             <li :class="`w-full ${ global.theme == 'night' ? 'font-bold opacity-100' : 'opacity-50' } `"><button @click="global.setTheme('night')">Night</button></li>
+            <li :class="`w-full ${ global.theme == 'black' ? 'font-bold opacity-100' : 'opacity-50' } `"><button @click="global.setTheme('black')">Black</button></li>
             <li :class="`w-full ${ global.theme == 'coffee' ? 'font-bold opacity-100' : 'opacity-50' } `"><button @click="global.setTheme('coffee')">Coffee</button></li>
             <li :class="`w-full ${ global.theme == 'aqua' ? 'font-bold opacity-100' : 'opacity-50' } `"><button @click="global.setTheme('aqua')">Aqua</button></li>
           </ul>
         </li>
         <li>
-          <a id="github-link" href="https://github.com/trentbrew/toybox" target="_blank" class="rounded-box"><Icon name="github" /></a>
+          <a id="github-link" href="https://github.com/trentbrew/toybox" target="_blank" class="!rounded-box pl-4">
+            <Icon name="github" />
+          </a>
         </li>
       </ul>
     </div>
@@ -50,10 +54,10 @@ watch(() => state.search, (val) => global.updateQuery(val))
 
 <style scoped>
   li a {
-    @apply opacity-[0.4] rounded active:bg-base-100 active:text-white
+    @apply opacity-[0.4] rounded active:bg-base-100 active:text-white;
   }
   .router-link-exact-active {
-    @apply opacity-[1] bg-transparent
+    @apply opacity-100 bg-transparent text-white;
   }
   #github-link {
     opacity: 1 !important;
