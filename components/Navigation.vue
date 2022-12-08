@@ -29,10 +29,10 @@ watch(() => state.search, (val) => global.updateQuery(val))
       </ul>
     </div>
     <div class="w-full ml-8 mr-6 flex justify-center">
-      <label v-show="route.path === '/icons'">
+      <label class="duration-150" :class="route.path !== '/icons' && 'opacity-0'">
         <Icon name="search" class="opacity-30 translate-x-[46px]" />
       </label>
-      <input v-show="route.path === '/icons'" v-model="state.search" type="text" aria-label="Search icons" class="input input-bordered pl-16 rounded-box w-full bg-transparent active:outline-none focus:!outline-none text-white" />
+      <input v-model="state.search" type="text" aria-label="Search icons" class="input input-bordered input-lg pl-16 rounded-box w-full bg-transparent active:outline-none focus:!outline-none text-white" :class="route.path !== '/icons' && 'pointer-events-none opacity-0'" />
     </div>
     <div class="navbar-end hidden lg:flex w-auto">
       <ul class="menu menu-horizontal">
