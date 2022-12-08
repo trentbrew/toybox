@@ -23,12 +23,12 @@
         <img src="../assets/images/logo.png" class="w-10 h-10" />
       </NuxtLink>
       <ul class="menu menu-horizontal min-w-fit">
-        <li>
+        <li id="components-link">
           <NuxtLink href="/components" class="rounded-box">
             <span>Components</span>
           </NuxtLink>
         </li>
-        <li>
+        <li id="icons-link">
           <NuxtLink to="/icons" class="rounded-box">
             <span>Icons</span>
           </NuxtLink>
@@ -64,7 +64,7 @@
             class="flex items-center gap-1 cursor-pointer pr-2 hover:bg-transparent !rounded-box"
           >
             <Icon name="swatch" class="text-neutral-content" />
-            <Icon name="dropdown" class="opacity-50" />
+            <Icon name="dropdown" class="opacity-50 text-neutral-content" />
           </label>
           <ul
             tabindex="0"
@@ -106,14 +106,11 @@
   #logo {
     @apply bg-transparent;
   }
-  li,
-  li a {
-    @apply text-neutral-content/40 rounded active:bg-base-200;
+  #components-link a,
+  #icons-link a {
+    @apply text-neutral-content/40 rounded active:bg-transparent;
   }
   .router-link-exact-active {
     @apply !text-neutral-content bg-transparent;
-  }
-  .dropdown-content {
-    @apply !text-base-content;
   }
 </style>

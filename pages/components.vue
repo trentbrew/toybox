@@ -26,14 +26,16 @@
 </script>
 
 <template>
-  <main class="w-full grid grid-cols-2">
+  <main class="w-full grid grid-cols-2 gap-12">
     <div id="left">
       <section>
-        <h1>Table.vue</h1>
+        <h3>Table.vue</h3>
         <Table :data="state.testData" class="w-full" />
       </section>
+    </div>
+    <div id="right">
       <section>
-        <h1>Loader.vue</h1>
+        <h3>Loader.vue</h3>
         <div class="grid grid-cols-4 gap-x-12">
           <Loader type="1" size="32" />
           <Loader type="2" size="32" />
@@ -46,13 +48,11 @@
         </div>
       </section>
     </div>
-
-    <div id="right"></div>
   </main>
 </template>
 
 <style scoped>
-  h1 {
+  h3 {
     @apply w-full text-center mb-12 font-normal;
   }
   section {

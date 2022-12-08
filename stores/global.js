@@ -1,11 +1,7 @@
 export const useGlobalStore = defineStore('global', {
   state: () => ({
     ui: {
-      theme: 'dark',
-    },
-    page: {
-      title: 'Greetings',
-      subtitle: 'This is some text from the global store',
+      theme: 'lofi',
     },
     search: {
       query: '',
