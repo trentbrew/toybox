@@ -13,7 +13,7 @@ const props = defineProps({
   },
 });
 
-const { data:svg } = api.get(props.name)
+const { data:svg } = api.icons.get(props.name)
 </script>
 
 <template>
