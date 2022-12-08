@@ -1,26 +1,21 @@
 <script setup>
-import api from '@/hooks/api'
+  import api from '@/hooks/api'
 
-const props = defineProps({
-  name: {
-    type: String,
-    default: "",
-    requred: true,
-  },
-  color: {
-    type: String,
-    default: "gray",
-  },
-});
+  const props = defineProps({
+    name: {
+      type: String,
+      default: '',
+      requred: true,
+    },
+    class: {
+      type: String,
+      default: '',
+    },
+  })
 
-const { data:svg } = api.icons.get(props.name)
+  const { data: svg } = api.icons.get(props.name)
 </script>
 
 <template>
-  <div
-    v-html="svg"
-    :style="`
-      color: ${props.color};
-    `"
-  ></div>
+  <div :class="props.class" v-html="svg"></div>
 </template>

@@ -68,7 +68,7 @@
             style="transition: 0ms"
           >
             <Icon v-if="!state.downloading" name="download" />
-            <Loader v-else type="4" color="#fff" />
+            <Loader v-else type="4" size="24" class="accent-content" />
           </div>
         </li>
         <a
