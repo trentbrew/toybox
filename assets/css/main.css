@@ -1,7 +1,7 @@
 /* ------------ layout ------------ */
 
 * {
-  font-family: 'Cartograph CF', monospace;
+  font-family: 'Hasklig', sans-serif;
 }
 
 .flexy {
@@ -52,8 +52,8 @@ h1 {
 /* ------------ fonts ------------ */
 
 @fontface {
-  font-family: 'Cartograph CF';
-  src: url('../fonts/cartograph.ttf') format('ttf');
+  font-family: 'Hasklig';
+  src: url('../fonts/hasklig.otf') format('otf');
   font-weight: 400;
   font-style: normal;
 }

@@ -14,10 +14,10 @@
 
 <template>
   <nav
-    class="fixed navbar pr-4 py-4 z-10 bg-base-100 border-b-[1px] border-base-content backdrop-blur-xl"
+    class="fixed navbar px-6 py-4 z-10 bg-base-100 border-b-2 border-base-content/10 backdrop-blur-xl"
   >
     <div class="navbar-start w-auto">
-      <NuxtLink id="logo" to="/">
+      <NuxtLink id="logo" to="/" class="mr-3 active:scale-95">
         <Logo />
       </NuxtLink>
       <ul class="menu menu-horizontal min-w-fit">
@@ -48,7 +48,7 @@
         v-model="state.search"
         type="text"
         aria-label="Search icon"
-        class="input input-lg pl-16 rounded-box w-full bg-base-200 focus:!outline-none text-base-content"
+        class="input input-lg pl-16 rounded-box w-full bg-base-300 focus:!outline-none text-base-content"
         :class="route.path !== '/icons' && 'scale-95'"
       />
     </div>
@@ -59,10 +59,10 @@
         >
           <label
             tabindex="0"
-            class="flex items-center gap-1 cursor-pointer pr-2 hover:bg-transparent !rounded-box"
+            class="flex items-center gap-1 cursor-pointer pr-2 !rounded-box"
           >
-            <Icon name="swatch" class="text-neutral-content" />
-            <Icon name="dropdown" class="opacity-50 text-neutral-content" />
+            <Icon name="swatch" class="text-base-content" />
+            <Icon name="dropdown" class="text-base-content" />
           </label>
           <ul
             tabindex="0"
@@ -104,7 +104,7 @@
             target="_blank"
             class="!rounded-box pl-4"
           >
-            <Icon name="github" class="text-neutral-content" />
+            <Icon name="github" class="text-base-content" />
           </a>
         </li>
       </ul>
@@ -113,11 +113,17 @@
 </template>
 
 <style scoped>
-  #components-link a,
-  #icons-link a {
-    @apply text-neutral-content/40 rounded active:bg-transparent;
+  #logo {
+    transition: 300ms !important;
   }
-  .router-link-exact-active {
-    @apply !text-neutral-content bg-transparent;
+  li a,
+  li label {
+    @apply text-base-content rounded active:bg-base-200;
+  }
+  li a:active {
+    @apply scale-95;
+  }
+  a.router-link-exact-active {
+    @apply !text-primary bg-transparent;
   }
 </style>

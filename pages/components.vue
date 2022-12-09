@@ -26,7 +26,7 @@
 </script>
 
 <template>
-  <main class="w-full grid grid-cols-2 gap-12">
+  <main class="w-full grid grid-cols-2 gap-4">
     <div id="left">
       <section>
         <h3>Table.vue</h3>

@@ -21,8 +21,12 @@
         </p>
         <br />
         <div class="flex gap-4 justify-center">
-          <Button to="/api/v1/icons" text="Icons API" />
-          <Button href="https://github.com" text="Docs" />
+          <Button
+            href="https://github.com/trentbrew/toybox"
+            text="Get started"
+            icon="open"
+            class="btn-outline"
+          />
         </div>
       </div>
     </div>
