@@ -1,8 +1,10 @@
 <template>
   <Navigation />
   <div>
-    <div class="p-12 pt-[140px]">
-      <NuxtPage />
+    <div class="pt-[96px]">
+      <div class="p-12">
+        <NuxtPage />
+      </div>
     </div>
   </div>
 </template>
