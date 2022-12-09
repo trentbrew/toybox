@@ -48,7 +48,7 @@
         v-model="state.search"
         type="text"
         aria-label="Search icon"
-        class="input input-lg pl-16 rounded-box w-full bg-base-300 focus:!outline-none text-base-content"
+        class="input input-lg pl-16 rounded-box w-full bg-base-200 focus:!outline-none text-base-content"
         :class="route.path !== '/icons' && 'scale-95'"
       />
     </div>
@@ -66,7 +66,7 @@
           </label>
           <ul
             tabindex="0"
-            class="dropdown-content menu p-2 shadow bg-base-300 rounded-box w-56"
+            class="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-56"
           >
             <li>
               <button @click="global.setTheme('cupcake')">Cupcake</button>
@@ -124,6 +124,6 @@
     @apply scale-95;
   }
   a.router-link-exact-active {
-    @apply !text-primary bg-transparent;
+    @apply !text-secondary-content bg-transparent;
   }
 </style>

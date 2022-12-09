@@ -25,7 +25,7 @@
             href="https://github.com/trentbrew/toybox"
             text="Get started"
             icon="open"
-            class="btn-outline"
+            class="btn-secondary"
           />
         </div>
       </div>

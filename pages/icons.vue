@@ -54,7 +54,7 @@
       >
         <li
           @click="downloadSVG(icon)"
-          class="w-full flex justify-between items-center rounded-box p-6 bg-base-300 hover:bg-base-200 hover:scale-[1.02] cursor-pointer group !duration-150 active:scale-[0.98] active:bg-base-300"
+          class="w-full flex justify-between items-center rounded-box p-6 bg-base-200 hover:bg-base-300 hover:scale-[1.02] cursor-pointer group !duration-150 active:scale-[0.98] active:bg-base-200"
           style="transition: 0ms"
         >
           <div class="left flex items-center gap-3">
