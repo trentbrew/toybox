@@ -36,10 +36,6 @@ Toybox is a collection of components and icons for quickly building playful UIs 
       default: '',
       requred: true,
     },
-    color: {
-      type: String,
-      default: '',
-    },
   })
 
   const { data: icon } = await http.get(
