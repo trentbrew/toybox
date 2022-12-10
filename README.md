@@ -1,6 +1,7 @@
 <br />
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/32501733/206873182-905d2443-9a6c-4b97-8001-3e572af54c9b.png" width="80" height="80" />
+
+  <img src="https://user-images.githubusercontent.com/32501733/206873215-81bab10f-e181-4fd9-916a-131fcbf6e217.png" width="100" height="100" />
 
   <h1>Toybox</h1>
   <p align="center">
