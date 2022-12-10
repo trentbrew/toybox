@@ -7,7 +7,7 @@
 
   <h1>Toybox</h1>
   <p align="center">
-    <a href="https://toybox.design" target="_blank">Components</a>
+    <a href="https://toybox.design/components" target="_blank">Components</a>
     &nbsp·&nbsp
     <a href="https://toybox.design/icons" target="_blank">Icons</a>
     &nbsp·&nbsp
