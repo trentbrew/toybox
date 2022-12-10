@@ -32,8 +32,6 @@ Toybox is a collection of components and icons for quickly building playful UIs 
 
 - To specify icon size, add a `size` query parameter to the API URL. The default size is 24px.
 
-````js
-
 ## Contributing
 
 - To add a new icon, insert a new object into the `icons` array in `~/data/icons.js`. Default size should be 24px, fill should be `currentColor`, and tags are automatically generated from the icon name. However, you can add custom tags if you want.
@@ -87,4 +85,7 @@ Toybox is a collection of components and icons for quickly building playful UIs 
 ## Components
 
 Toybox componenets are big WIP. Feel free to contribute!
-````
+
+```
+
+```
