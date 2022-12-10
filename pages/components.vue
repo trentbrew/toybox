@@ -30,7 +30,7 @@
     <div id="left">
       <section>
         <h3>Table.vue</h3>
-        <Table :data="state.testData" class="w-full" />
+        <BlockTable :data="state.testData" class="w-full" />
       </section>
     </div>
     <div id="right">
