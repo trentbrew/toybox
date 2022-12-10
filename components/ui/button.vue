@@ -30,7 +30,7 @@
       <Icon v-if="props.icon" :name="props.icon" size="18" />
     </button>
   </NuxtLink>
-  <a v-if="props.href" :href="props.href">
+  <a v-if="props.href" :href="props.href" target="_blank">
     <button class="btn rounded flex gap-2" :class="props.class">
       <span>{{ props.text }}</span>
       <Icon v-if="props.icon" :name="props.icon" size="18" />
