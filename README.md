@@ -85,7 +85,3 @@ Icon color can be controlled with CSS or Tailwind classes:
 ## Components
 
 Toybox componenets are big WIP. Feel free to contribute!
-
-```
-
-```
