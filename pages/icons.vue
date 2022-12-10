@@ -26,7 +26,7 @@
 
   function downloadSVG(icon) {
     state.downloading = true
-    const blob = new Blob([icon.data], { type: 'image/svg+xml' })
+    const blob = new Blob([icon.svg], { type: 'image/svg+xml' })
     const url = URL.createObjectURL(blob)
     state.url = url
     setTimeout(() => {
@@ -57,7 +57,7 @@
           class="w-full flex justify-between items-center rounded-box p-6 bg-base-100 hover:scale-[1.02] cursor-pointer group !duration-150 active:scale-[1.01] active:bg-base-100 active:shadow-sm"
         >
           <div class="left flex items-center gap-3">
-            <div v-html="icon.data" class="text-base-content"></div>
+            <div v-html="icon.svg" class="text-base-content"></div>
             <span class="opacity-50 group-hover:opacity-100">{{
               icon.name
             }}</span>
