@@ -17,7 +17,7 @@
     xmlns="http://www.w3.org/2000/svg"
   >
     <circle
-      class="bear__tummy fill-primary-focus/80"
+      class="bear__tummy fill-primary"
       cx="248.928"
       cy="308.277"
       r="72.1388"
