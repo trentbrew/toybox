@@ -69,6 +69,9 @@
             class="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-56"
           >
             <li>
+              <button @click="global.setTheme('emerald')">Emerald</button>
+            </li>
+            <li>
               <button @click="global.setTheme('winter')">Winter</button>
             </li>
             <li>
@@ -85,9 +88,6 @@
             </li>
             <li>
               <button @click="global.setTheme('coffee')">Coffee</button>
-            </li>
-            <li>
-              <button @click="global.setTheme('emerald')">Emerald</button>
             </li>
             <li>
               <button @click="global.setTheme('retro')">Retro</button>
