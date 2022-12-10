@@ -48,9 +48,6 @@ Toybox is a collection of components and icons for quickly building playful UIs 
 </script>
 
 <template>
-  <div
-    v-html="icon.svg"
-    :style="`${props.color ? `color: ${props.color}` : ''}`"
-  ></div>
+  <div v-html="icon.svg"></div>
 </template>
 ```
