@@ -14,12 +14,10 @@
     <a href="https://toybox.design/api/v1/icons" target="_blank">API</a>
   </p>
 </div>
-<br />
 
 ## About
 
 Toybox is a collection of components and icons for quickly building playful UIs for the web. Toybox is built with [Nuxt](https://nuxt.com/docs/getting-started/introduction), [TailwindCSS](https://tailwindcss.com/docs), and [DaisyUI](https://daisyui.com).
-<br />
 
 ## Icons API
 
@@ -53,7 +51,6 @@ Toybox is a collection of components and icons for quickly building playful UIs 
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-   <br />
 
 ## Example Icon Component (Nuxt)
 
@@ -87,7 +84,6 @@ Toybox is a collection of components and icons for quickly building playful UIs 
 <Icon name="star" class="text-blue-400" />
 ```
 
-<br />
 ## Components
 
 Toybox componenets are big WIP. Feel free to contribute!
