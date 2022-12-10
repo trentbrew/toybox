@@ -56,6 +56,6 @@
     @apply w-full text-center mb-12 font-normal;
   }
   section {
-    @apply flex flex-col justify-center mb-12 items-center bg-base-300 p-12 rounded-3xl;
+    @apply flex flex-col justify-center mb-12 items-center bg-base-100 p-12 rounded-box;
   }
 </style>

@@ -2,19 +2,21 @@
 
 <template>
   <main
-    class="hero bg-base-100 absolute top-[97px] left-0 h-[calc(100vh-97px)]"
+    class="hero bg-base-100 absolute top-[97px] left-0 h-[calc(100vh-96px)]"
   >
     <div class="hero-content text-center">
-      <div class="max-w-md -mt-24">
+      <div class="max-w-md -mt-36">
         <h1 class="text-5xl font-bold">toybox</h1>
         <p class="py-6">
           A kit for building playful UIs for the web, built ontop of
-          <a class="text-accent hover:underline" href="https://daisyui.com/"
+          <a
+            class="text-primary hover:underline font-bold"
+            href="https://daisyui.com/"
             >DaisyUI</a
           >
           and powered by
           <a
-            class="text-accent hover:underline"
+            class="text-primary hover:underline font-bold"
             href="https://nuxt.com/docs/getting-started/introduction"
             >Nuxt</a
           >
@@ -25,7 +27,7 @@
             href="https://github.com/trentbrew/toybox"
             text="Get started"
             icon="open"
-            class="btn-secondary"
+            class="btn-primary"
           />
         </div>
       </div>

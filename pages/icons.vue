@@ -54,8 +54,7 @@
       >
         <li
           @click="downloadSVG(icon)"
-          class="w-full flex justify-between items-center rounded-box p-6 bg-base-200 hover:bg-base-300 hover:scale-[1.02] cursor-pointer group !duration-150 active:scale-[0.98] active:bg-base-200"
-          style="transition: 0ms"
+          class="w-full flex justify-between items-center rounded-box p-6 bg-base-100 hover:scale-[1.02] cursor-pointer group !duration-150 active:scale-[1.01] active:bg-base-100 active:shadow-sm"
         >
           <div class="left flex items-center gap-3">
             <div v-html="icon.data" class="text-base-content"></div>
@@ -66,8 +65,12 @@
           <div
             class="opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100 !duration-75 w-6 h-6 flex justify-center items-cenmter"
           >
-            <Icon v-if="!state.downloading" name="download" />
-            <Loader v-else type="3" size="24" class="accent-content" />
+            <Icon
+              v-if="!state.downloading"
+              name="download"
+              class="text-primary"
+            />
+            <Loader v-else type="3" size="24" class="text-primary" />
           </div>
         </li>
         <a

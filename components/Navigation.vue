@@ -14,7 +14,8 @@
 
 <template>
   <nav
-    class="fixed navbar px-6 py-4 z-10 bg-base-100 border-b-2 border-base-content/10 backdrop-blur-xl"
+    class="fixed navbar px-6 py-4 z-10 bg-base-100 border-base-200 duration-150"
+    :class="route.path !== '/' ? 'border-b-2' : 'border-b-0'"
   >
     <div class="navbar-start w-auto">
       <NuxtLink id="logo" to="/" class="mr-3 active:scale-95">
@@ -35,13 +36,12 @@
     </div>
     <div
       class="w-full ml-8 mr-6 flex justify-center !duration-300"
-      :class="route.path !== '/icons' && 'pointer-events-none opacity-0'"
+      :class="route.path === '/' && 'pointer-events-none opacity-0'"
     >
       <label>
         <Icon
           name="search"
           class="translate-x-[46px] text-base-content !duration-150"
-          :class="route.path !== '/icons' && 'translate-x-[64px] opacity-0'"
         />
       </label>
       <input
@@ -49,7 +49,7 @@
         type="text"
         aria-label="Search icon"
         class="input input-lg pl-16 rounded-box w-full bg-base-200 focus:!outline-none text-base-content"
-        :class="route.path !== '/icons' && 'scale-95'"
+        :class="route.path === '/' && 'scale-95'"
       />
     </div>
     <div class="navbar-end hidden lg:flex w-auto">
@@ -69,13 +69,13 @@
             class="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-56"
           >
             <li>
-              <button @click="global.setTheme('cupcake')">Cupcake</button>
+              <button @click="global.setTheme('winter')">Winter</button>
             </li>
             <li>
-              <button @click="global.setTheme('dark')">Dark</button>
+              <button @click="global.setTheme('pastel')">Pastel</button>
             </li>
             <li>
-              <button @click="global.setTheme('lofi')">Lofi</button>
+              <button @click="global.setTheme('wireframe')">Wireframe</button>
             </li>
             <li>
               <button @click="global.setTheme('night')">Night</button>
@@ -94,6 +94,18 @@
             </li>
             <li>
               <button @click="global.setTheme('black')">Black</button>
+            </li>
+            <li>
+              <button @click="global.setTheme('valentine')">Valentine</button>
+            </li>
+            <li>
+              <button @click="global.setTheme('garden')">Garden</button>
+            </li>
+            <li>
+              <button @click="global.setTheme('lemonade')">Lemonade</button>
+            </li>
+            <li>
+              <button @click="global.setTheme('autumn')">Autumn</button>
             </li>
           </ul>
         </li>
@@ -118,12 +130,12 @@
   }
   li a,
   li label {
-    @apply text-base-content rounded active:bg-base-200;
+    @apply text-base-content/50 rounded active:bg-base-200;
   }
   li a:active {
     @apply scale-95;
   }
   a.router-link-exact-active {
-    @apply !text-secondary-content bg-transparent;
+    @apply !text-base-content bg-transparent;
   }
 </style>
