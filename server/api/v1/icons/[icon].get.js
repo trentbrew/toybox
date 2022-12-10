@@ -6,8 +6,8 @@ export default defineEventHandler(event => {
   const payload = {
     name: icon.name,
     svg: icon.svg.replace(
-      /<svg[^>]*>/,
-      `<svg width="${size}" height="${size}">`
+      /width="(\d+)" height="(\d+)"/,
+      `width="${size}" height="${size}"`
     ),
   }
   return payload
