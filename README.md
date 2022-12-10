@@ -9,6 +9,7 @@
     <a href="https://toybox.design/api/v1/icons">API</a>
   </p>
 </div>
+<br />
 
 ## About
 
