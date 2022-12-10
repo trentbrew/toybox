@@ -14,7 +14,7 @@
 
 <template>
   <nav
-    class="fixed navbar px-6 py-4 z-10 bg-base-100 border-base-200 duration-150"
+    class="fixed navbar px-6 py-4 z-10 border-base-200 bg-base-100 duration-150"
     :class="route.path !== '/' ? 'border-b-2' : 'border-b-0'"
   >
     <div class="navbar-start w-auto">
