@@ -21,7 +21,7 @@
 </script>
 
 <template>
-  <div class="overflow-x-auto z-0 rounded-box">
+  <div class="overflow-x-auto z-0 rounded-box border-[1px]">
     <table class="table w-full">
       <thead>
         <tr>
