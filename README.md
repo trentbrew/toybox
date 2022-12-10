@@ -42,14 +42,14 @@ Toybox is a collection of components and icons for quickly building playful UIs 
     },
   })
 
-  const { data: svg } = api.get(
+  const { data: icon } = api.get(
     `http://iconicui.vercel.app/api/icons/${props.name}`
   )
 </script>
 
 <template>
   <div
-    v-html="svg"
+    v-html="icon.svg"
     :style="`${props.color ? `color: ${props.color}` : ''}`"
   ></div>
 </template>
