@@ -66,13 +66,13 @@ To add a new icon, insert a new object into the `icons` array in `~/data/icons.j
     },
   })
 
-  const { data: icon } = await http.get(
+  const { svg } = await http.get(
     `http://toybox.design/api/v1/icons/${props.name}?size=${props.size}`
   )
 </script>
 
 <template>
-  <div v-html="icon.svg"></div>
+  <div v-html="svg"></div>
 </template>
 ```
 
