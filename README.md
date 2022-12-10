@@ -7,30 +7,51 @@
 
   <h1>Toybox</h1>
   <p align="center">
-    <a href="https://toybox.design">Components</a>
+    <a href="https://toybox.design" target="_blank">Components</a>
     &nbsp·&nbsp
-    <a href="https://toybox.design/icons">Icons</a>
+    <a href="https://toybox.design/icons" target="_blank">Icons</a>
     &nbsp·&nbsp
-    <a href="https://toybox.design/api/v1/icons">API</a>
+    <a href="https://toybox.design/api/v1/icons" target="_blank">API</a>
   </p>
 </div>
 <br />
 
 ## About
 
-Toybox is a collection of components and icons for quickly building playful UIs for the web. Toybox is built with [Nuxt](https://nuxt.com/docs/getting-started/introduction) and [TailwindCSS](https://tailwindcss.com/docs).
+Toybox is a collection of components and icons for quickly building playful UIs for the web. Toybox is built with [Nuxt](https://nuxt.com/docs/getting-started/introduction), [TailwindCSS](https://tailwindcss.com/docs), and [DaisyUI](https://daisyui.com).
 
-## Icons
+## Icons API
 
 - You can use the API to fetch icons. The API is available at [toybox.design/api/v1/icons](https://toybox.design/api/v1/icons). The API returns the following JSON:
 
 ```json
 {
   "name": "icon_name",
-  "tags": ["tag1", "tag2", "tag3"],
   "svg": "<svg>...</svg>"
 }
 ```
+
+- To specify icon size, add a `size` query parameter to the API URL. The default size is 24px.
+
+````js
+
+## Contributing
+
+- To add a new icon, insert a new object into the `icons` array in `~/data/icons.js`. Default size should be 24px, fill should be `currentColor`, and tags are automatically generated from the icon name. However, you can add custom tags if you want.
+
+```js
+{
+  name: 'icon_name',
+  svg: '<svg>...</svg>',
+  tags: ['tag1', 'tag2', 'tag3'], // optional
+},
+````
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## Example Icon Component (Nuxt)
 
@@ -42,10 +63,14 @@ Toybox is a collection of components and icons for quickly building playful UIs 
       default: '',
       requred: true,
     },
+    size: {
+      type: [Number, String],
+      default: 24,
+    },
   })
 
   const { data: icon } = await http.get(
-    `http://toybox.design/api/v1/icons/${props.name}`
+    `http://toybox.design/api/v1/icons/${props.name}?size=${props.size}`
   )
 </script>
 
@@ -53,3 +78,13 @@ Toybox is a collection of components and icons for quickly building playful UIs 
   <div v-html="icon.svg"></div>
 </template>
 ```
+
+Icon color can be controlled with CSS or Tailwind classes:
+
+```vue
+<Icon name="star" class="text-blue-400" />
+```
+
+## Components
+
+Toybox componenets are big WIP. Feel free to contribute!

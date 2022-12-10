@@ -1,5 +1,5 @@
 <script setup>
-  const supabase = useSupabase()
+  // const supabase = useSupabase()
 
   const emit = defineEmits(['uploading', 'error', 'success'])
 
@@ -12,7 +12,7 @@
 
   async function upload(event) {
     console.log('event: ', event)
-    supabase.uploadFile('test', event.target.files[0])
+    // supabase.uploadFile('test', event.target.files[0])
   }
 </script>
 

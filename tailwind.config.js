@@ -13,6 +13,9 @@ module.exports = {
       borderRadius: {
         DEFAULT: '6px',
       },
+      fontFamily: {
+        mono: 'monospace',
+      },
     },
   },
   plugins: [require('daisyui')],

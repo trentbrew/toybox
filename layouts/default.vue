@@ -1,5 +1,5 @@
 <template>
-  <Navigation />
+  <BlockNav />
   <div>
     <div class="pt-[97px]">
       <div class="p-12 min-h-[calc(100vh-97px)] bg-base-200">

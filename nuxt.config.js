@@ -28,6 +28,10 @@ export default defineNuxtConfig({
     dirs: ['stores'],
   },
 
+  components: {
+    dirs: ['~/components/ui', '~/components'],
+  },
+
   build: {
     loaders: {
       sass: {
