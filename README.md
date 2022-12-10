@@ -46,10 +46,10 @@ Toybox is a collection of components and icons for quickly building playful UIs 
 },
 ````
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+1. Fork the project
+2. Create your Feature Branch (`git checkout -b icon_name`)
+3. Commit your Changes (`git commit -m 'add icon icon_name'`)
+4. Push to the Branch (`git push -u origin icon_name`)
 5. Open a Pull Request
 
 ## Example Icon Component (Nuxt)
