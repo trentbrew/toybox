@@ -44,7 +44,7 @@ Toybox is a collection of components and icons for quickly building playful UIs 
   svg: '<svg>...</svg>',
   tags: ['tag1', 'tag2', 'tag3'], // optional
 },
-````
+```
 
 1. Fork the project
 2. Create your Feature Branch (`git checkout -b icon_name`)
@@ -87,3 +87,4 @@ Toybox is a collection of components and icons for quickly building playful UIs 
 ## Components
 
 Toybox componenets are big WIP. Feel free to contribute!
+````
