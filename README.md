@@ -22,7 +22,7 @@ Toybox is a collection of components and icons for quickly building playful UIs 
 {
   "name": "icon_name",
   "tags": ["tag1", "tag2", "tag3"],
-  "data": "<svg>...</svg>"
+  "svg": "<svg>...</svg>"
 }
 ```
 
@@ -30,21 +30,21 @@ Toybox is a collection of components and icons for quickly building playful UIs 
 
 ```vue
 <script setup>
-const props = defineProps({
-  name: {
-    type: String,
-    default: "",
-    requred: true,
-  },
-  color: {
-    type: String,
-    default: "",
-  },
-});
+  const props = defineProps({
+    name: {
+      type: String,
+      default: '',
+      requred: true,
+    },
+    color: {
+      type: String,
+      default: '',
+    },
+  })
 
-const { data: svg } = api.get(
-  `http://iconicui.vercel.app/api/icons/${props.name}`
-);
+  const { data: svg } = api.get(
+    `http://iconicui.vercel.app/api/icons/${props.name}`
+  )
 </script>
 
 <template>
