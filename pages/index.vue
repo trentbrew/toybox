@@ -24,7 +24,7 @@
         <br />
         <div class="flex gap-4 justify-center">
           <Button
-            href="https://github.com/trentbrew/toybox"
+            href="https://github.com/trentbrew/toybox#readme"
             text="Get started"
             icon="open"
             class="btn-primary"

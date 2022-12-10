@@ -24,7 +24,7 @@
     icon.value.firstChild.setAttribute('height', props.size)
   })
 
-  const { data: svg } = api.icons.get(props.name)
+  const { svg } = api.icons.get(props.name)
 </script>
 
 <template>
