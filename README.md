@@ -1,5 +1,6 @@
 <br />
 <div align="center">
+  ![toybox_alt](https://user-images.githubusercontent.com/32501733/206873127-c45af1ec-d1fd-47c0-9815-04f510bdc6a1.png)
   <h1>Toybox</h1>
   <p align="center">
     <a href="https://toybox.design">Components</a>
