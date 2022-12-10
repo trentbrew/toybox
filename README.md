@@ -42,7 +42,7 @@ Toybox is a collection of components and icons for quickly building playful UIs 
     },
   })
 
-  const { data: icon } = api.get(
+  const { data: icon } = await http.get(
     `http://iconicui.vercel.app/api/icons/${props.name}`
   )
 </script>
