@@ -1,5 +1,7 @@
 <br />
 <div align="center">
+  <img src="https://user-images.githubusercontent.com/32501733/206873182-905d2443-9a6c-4b97-8001-3e572af54c9b.png" width="80" height="80" />
+
   <h1>Toybox</h1>
   <p align="center">
     <a href="https://toybox.design">Components</a>
