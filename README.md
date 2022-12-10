@@ -21,7 +21,7 @@ Toybox is a collection of components and icons for quickly building playful UIs 
 
 ## Icons API
 
-- You can use the API to fetch icons. The API is available at [toybox.design/api/v1/icons](https://toybox.design/api/v1/icons). The API returns the following JSON:
+You can use the API to fetch icons. The API is available at [toybox.design/api/v1/icons](https://toybox.design/api/v1/icons). The API returns the following JSON:
 
 ```json
 {
@@ -30,11 +30,11 @@ Toybox is a collection of components and icons for quickly building playful UIs 
 }
 ```
 
-- To specify icon size, add a `size` query parameter to the API URL. The default size is 24px.
+To specify icon size, add a `size` query parameter to the API URL. The default size is 24px.
 
 ## Contributing
 
-- To add a new icon, insert a new object into the `icons` array in `~/data/icons.js`. Default size should be 24px, fill should be `currentColor`, and tags are automatically generated from the icon name. However, you can add custom tags if you want.
+To add a new icon, insert a new object into the `icons` array in `~/data/icons.js`. Default size should be 24px, fill should be `currentColor`, and tags are automatically generated from the icon name. However, you can add custom tags if you want.
 
 ```js
 {
@@ -76,7 +76,7 @@ Toybox is a collection of components and icons for quickly building playful UIs 
 </template>
 ```
 
-- Icon color can be controlled with CSS or Tailwind classes:
+Icon color can be controlled with CSS or Tailwind classes:
 
 ```vue
 <Icon name="star" class="text-blue-400" />
