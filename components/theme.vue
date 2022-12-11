@@ -18,9 +18,18 @@
     >
       <span>{{ props.name }}</span>
       <div class="flex gap-1">
-        <div class="dot bg-primary"></div>
-        <div class="dot bg-secondary"></div>
-        <div class="dot bg-accent"></div>
+        <div
+          :data-theme="props.name"
+          class="dot border-primary-content/25 bg-primary"
+        ></div>
+        <div
+          :data-theme="props.name"
+          class="dot border-secondary-content/25 bg-secondary"
+        ></div>
+        <div
+          :data-theme="props.name"
+          class="dot border-accent-content/25 bg-accent"
+        ></div>
       </div>
     </button>
   </li>
@@ -28,6 +37,6 @@
 
 <style scoped>
   .dot {
-    @apply rounded-full w-2 h-2;
+    @apply rounded w-2 h-2 border-[1px];
   }
 </style>

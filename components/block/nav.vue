@@ -65,7 +65,7 @@
           </label>
           <ul
             tabindex="0"
-            class="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-64"
+            class="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-80"
           >
             <Theme name="cmyk" />
             <Theme name="pastel" />
