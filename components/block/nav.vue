@@ -1,5 +1,4 @@
 <script setup>
-  const global = useGlobalStore()
   const route = useRoute()
 
   const state = reactive({
@@ -66,47 +65,23 @@
           </label>
           <ul
             tabindex="0"
-            class="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-56"
+            class="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-64"
           >
-            <li>
-              <button @click="global.setTheme('emerald')">Emerald</button>
-            </li>
-            <li>
-              <button @click="global.setTheme('winter')">Winter</button>
-            </li>
-            <li>
-              <button @click="global.setTheme('pastel')">Pastel</button>
-            </li>
-            <li>
-              <button @click="global.setTheme('wireframe')">Wireframe</button>
-            </li>
-            <li>
-              <button @click="global.setTheme('night')">Night</button>
-            </li>
-            <li>
-              <button @click="global.setTheme('aqua')">Aqua</button>
-            </li>
-            <li>
-              <button @click="global.setTheme('coffee')">Coffee</button>
-            </li>
-            <li>
-              <button @click="global.setTheme('retro')">Retro</button>
-            </li>
-            <li>
-              <button @click="global.setTheme('black')">Black</button>
-            </li>
-            <li>
-              <button @click="global.setTheme('valentine')">Valentine</button>
-            </li>
-            <li>
-              <button @click="global.setTheme('garden')">Garden</button>
-            </li>
-            <li>
-              <button @click="global.setTheme('lemonade')">Lemonade</button>
-            </li>
-            <li>
-              <button @click="global.setTheme('autumn')">Autumn</button>
-            </li>
+            <Theme name="cmyk" />
+            <Theme name="emerald" />
+            <Theme name="autumn" />
+            <Theme name="winter" />
+            <Theme name="pastel" />
+            <Theme name="wireframe" />
+            <Theme name="retro" />
+            <Theme name="valentine" />
+            <Theme name="garden" />
+            <Theme name="lemonade" />
+            <Theme name="aqua" />
+            <Theme name="coffee" />
+            <Theme name="forest" />
+            <Theme name="night" />
+            <Theme name="black" />
           </ul>
         </li>
         <li>
@@ -126,7 +101,7 @@
 
 <style scoped>
   #logo {
-    transition: 300ms !important;
+    @apply !duration-300;
   }
   li a,
   li label {
