@@ -50,7 +50,7 @@
         fill="#D9D9D9"
       />
       <ellipse
-        class="fill-secondary"
+        class="fill-primary-focus"
         cx="106.944"
         cy="340.509"
         rx="56.7901"
@@ -70,7 +70,7 @@
         fill="#D9D9D9"
       />
       <ellipse
-        class="fill-secondary"
+        class="fill-primary-focus"
         cx="395.499"
         cy="340.509"
         rx="56.7901"
@@ -104,7 +104,7 @@
           rx="51.8018"
         />
         <rect
-          class="fill-secondary"
+          class="fill-primary-focus"
           x="321.058"
           y="117.953"
           width="56.7901"
@@ -123,7 +123,7 @@
           fill="#D9D9D9"
         />
         <rect
-          class="fill-secondary"
+          class="fill-primary-focus"
           x="157.595"
           y="88.7904"
           width="56.7901"
@@ -142,7 +142,7 @@
         fill="#D9D9D9"
       />
       <ellipse
-        class="bear_head--snoot fill-secondary"
+        class="bear_head--snoot fill-primary-focus"
         cx="250.022"
         cy="227.375"
         rx="49.1641"

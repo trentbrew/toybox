@@ -68,10 +68,10 @@
             class="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-64"
           >
             <Theme name="cmyk" />
+            <Theme name="pastel" />
             <Theme name="emerald" />
             <Theme name="autumn" />
             <Theme name="winter" />
-            <Theme name="pastel" />
             <Theme name="wireframe" />
             <Theme name="retro" />
             <Theme name="valentine" />
