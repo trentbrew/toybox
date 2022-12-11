@@ -26,7 +26,7 @@
 </script>
 
 <template>
-  <main class="w-full grid grid-cols-2 gap-4">
+  <main class="w-full grid grid-cols-3 gap-4">
     <div id="left">
       <section>
         <h3>Table.vue</h3>
@@ -37,14 +37,14 @@
       <section>
         <h3>Loader.vue</h3>
         <div class="grid grid-cols-4 gap-x-12">
-          <Loader type="1" size="32" />
-          <Loader type="2" size="32" />
-          <Loader type="3" size="32" />
-          <Loader type="4" size="32" />
-          <Loader type="5" size="32" />
-          <Loader type="6" size="32" />
-          <Loader type="7" size="32" />
-          <Loader type="8" size="32" />
+          <Loader type="1" size="24" class="text-primary" />
+          <Loader type="2" size="24" class="text-primary" />
+          <Loader type="3" size="24" class="text-primary" />
+          <Loader type="4" size="24" class="text-primary" />
+          <Loader type="5" size="24" class="text-primary" />
+          <Loader type="6" size="24" class="text-primary" />
+          <Loader type="7" size="24" class="text-primary" />
+          <Loader type="8" size="24" class="text-primary" />
         </div>
       </section>
     </div>
