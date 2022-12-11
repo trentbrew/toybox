@@ -34,7 +34,7 @@ To specify icon size, add a `size` query parameter to the API URL. The default s
 
 ## Contributing
 
-To add a new icon, insert a new object into the `icons` array in `~/data/icons.js`. Default size should be 24px, fill should be `currentColor`, and tags are automatically generated from the icon name. However, you can add custom tags if you want.
+To add a new icon, insert a new object into the `icons` array in `~/data/icons.js`. Fill should be `currentColor`, and tags are automatically generated from the icon name. However, you can add custom tags if you want.
 
 ```js
 {
