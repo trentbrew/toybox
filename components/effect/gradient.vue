@@ -1,5 +1,5 @@
 <script setup>
-  import { Gradient } from 'whatamesh'
+  import { Gradient } from '@/lib/gradient'
 
   onMounted(() => {
     const gradient = new Gradient()
@@ -11,12 +11,11 @@
   #gradient-canvas {
     width: 100vw;
     height: 100vh;
-    filter: blur(24px);
     transform: scale(2);
     --gradient-color-1: hsl(var(--p));
     --gradient-color-2: hsl(var(--s));
     --gradient-color-3: hsl(var(--a));
-    --gradient-color-4: hsl(var(--n));
+    --gradient-color-4: hsl(var(--b1));
   }
 
   #gradient-canvas3 {

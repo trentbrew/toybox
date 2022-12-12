@@ -1,11 +1,10 @@
 <script setup></script>
 
 <template>
-  <main
-    class="hero bg-base-100 absolute top-[97px] left-0 h-[calc(100vh-96px)]"
-  >
+  <main class="hero bg-base-100 absolute top-0 left-0 h-screen overflow-hidden">
+    <EffectGradient class="absolute top-0 opacity-[0.5]" />
     <div class="hero-content text-center">
-      <div class="max-w-md -mt-36">
+      <div class="max-w-md">
         <h1 class="text-5xl font-bold">toybox</h1>
         <p class="py-6">
           A kit for building playful UIs for the web, built ontop of

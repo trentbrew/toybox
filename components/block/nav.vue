@@ -3,7 +3,12 @@
 
   const state = reactive({
     search: '',
+    scroll: 0,
   })
+
+  function handleScroll(e) {
+    state.scroll = e.value
+  }
 
   watch(
     () => state.search,
@@ -13,8 +18,15 @@
 
 <template>
   <nav
-    class="fixed navbar px-6 py-4 z-10 border-base-200 bg-base-100 duration-150"
-    :class="route.path !== '/' ? 'border-b-2' : 'border-b-0'"
+    v-scroll="handleScroll"
+    class="fixed navbar px-6 py-4 z-10"
+    :class="
+      route.path !== '/'
+        ? `bg-base-100 border-base-200 ${
+            state.scroll > 0 ? 'border-b-2' : 'border-b-0'
+          }`
+        : 'border-b-0 bg-transparent'
+    "
   >
     <div class="navbar-start w-auto">
       <NuxtLink id="logo" to="/" class="mr-3 active:scale-95">
