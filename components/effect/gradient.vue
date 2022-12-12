@@ -1,5 +1,5 @@
 <script setup>
-  import { Gradient } from '@/lib/gradient'
+  import { Gradient } from '~/modules/gradient'
 
   const global = useGlobalStore()
 
