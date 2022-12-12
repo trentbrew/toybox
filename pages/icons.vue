@@ -37,8 +37,8 @@
     const url = URL.createObjectURL(blob)
     state.url = url
     setTimeout(() => {
-      state.downloading = false
       download.value.filter(item => item.id === icon.name)[0].click()
+      state.downloading = false
     }, 500)
   }
 
@@ -86,7 +86,7 @@
         <a
           :id="icon.name"
           ref="download"
-          class="hidden"
+          class="absolute hidden"
           :download="icon.name"
           :href="state.url"
         ></a>
