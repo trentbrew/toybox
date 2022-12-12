@@ -7,9 +7,9 @@
 
   <h1>Toybox</h1>
   <p align="center">
+    <a href="https://npmjs.com/package/toyboxui" target="_blank">NPM</a>  ·
     <a href="https://toybox.design/components" target="_blank">Components</a> ·
     <a href="https://toybox.design/icons" target="_blank">Icons</a> ·
-    <a href="https://npmjs.com/package/toyboxui" target="_blank">NPM</a> ·
     <a href="https://toybox.design/api/v1/icons" target="_blank">API</a>
   </p>
 </div>
