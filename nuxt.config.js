@@ -29,7 +29,7 @@ export default defineNuxtConfig({
   },
 
   components: {
-    dirs: ['~/components'],
+    dirs: ['~/components', '~/components/tb'],
   },
 
   build: {

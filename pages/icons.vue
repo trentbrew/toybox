@@ -8,18 +8,25 @@
     blob: null,
     url: '',
     search: '',
+    filtered: [],
   })
 
-  const filtered = computed(() => {
+  async function getFilteredIcons() {
     return state.search
-      ? api.icons
+      ? await api.icons
           .get()
           .filter(
             icon =>
               icon.name.includes(state.search) ||
               icon.tags.includes(state.search)
           )
-      : api.icons.get()
+      : await api.icons.get()
+  }
+
+  onMounted(() => {
+    getFilteredIcons().then(data => {
+      state.filtered = data
+    })
   })
 
   const download = ref(null)
@@ -39,6 +46,9 @@
     () => global.query,
     val => {
       state.search = val
+      getFilteredIcons().then(data => {
+        state.filtered = data
+      })
     }
   )
 </script>
@@ -47,7 +57,7 @@
   <main>
     <ul class="w-full grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-4">
       <div
-        v-for="(icon, index) in filtered"
+        v-for="(icon, index) in state.filtered"
         :key="index"
         aria-role="button"
         :aria-label="`Download ${icon.name}`"
@@ -65,12 +75,12 @@
           <div
             class="opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100 !duration-75 w-6 h-6 flex justify-center items-cenmter"
           >
-            <Icon
+            <tb-icon
               v-if="!state.downloading"
               name="download"
-              class="text-primary"
+              class="text-secondary"
             />
-            <Loader v-else type="3" size="24" class="text-primary" />
+            <tb-loader v-else type="3" size="24" class="text-secondary" />
           </div>
         </li>
         <a
@@ -82,8 +92,13 @@
         ></a>
       </div>
     </ul>
-    <div v-if="!filtered.length" class="w-full h-[calc(100vh-300px)] flexx">
-      <h3 class="flexy gap-3 text-lg w-full text-center">
+    <div
+      v-if="!state.filtered.length"
+      class="w-full h-[calc(100vh-300px)] flex justify-center items-center"
+    >
+      <h3
+        class="flex flex-col justify-center items-center gap-3 text-lg w-full text-center"
+      >
         <span class="text-3xl">{{ '(╥﹏╥)' }}</span>
         <span class="text-base opacity-50">No icons found</span>
       </h3>

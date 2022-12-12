@@ -4,7 +4,7 @@
 
 <template>
   <main class="hero absolute top-0 left-0 h-screen overflow-hidden">
-    <EffectGradientMesh />
+    <GradientMesh />
     <div class="hero-content text-center">
       <div class="max-w-md">
         <h1 class="text-5xl font-bold">toybox</h1>
@@ -25,11 +25,10 @@
         <br />
         <div class="flex gap-4 justify-center">
           <tb-button
-            type="animated"
+            inner-class="btn-primary"
             to="https://github.com/trentbrew/toybox#readme"
             newtab
             text="Get started"
-            inner-class="bg-primary"
           />
         </div>
       </div>

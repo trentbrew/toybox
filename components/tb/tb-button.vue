@@ -1,4 +1,6 @@
 <script setup>
+  import { defineProps, computed, ref } from 'vue'
+
   const props = defineProps({
     innerClass: {
       type: String,
@@ -28,9 +30,9 @@
     :to="props.to || props.href"
     :target="props.newtab ? '_blank' : '_self'"
   >
-    <button class="btn rounded flex gap-2" :class="props.innerClass">
+    <button class="btn rounded flex gap-3" :class="props.innerClass">
       <span>{{ props.text }}</span>
-      <Icon
+      <tb-icon
         v-if="props.icon || props.newtab"
         :name="props.icon ? props.icon : props.newtab ? 'open' : 'star_active'"
         size="18"

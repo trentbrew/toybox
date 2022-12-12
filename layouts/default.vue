@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <BlockNav />
+  <Nav />
   <div>
     <div class="pt-[97px]">
       <div

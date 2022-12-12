@@ -1,20 +1,13 @@
+/* ------------ tailwind ------------ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* ------------ layout ------------ */
 
 * {
   font-family: 'Hasklig', sans-serif;
-}
-
-.flexy {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.flexx {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 main {
@@ -37,12 +30,6 @@ main {
 .ease-expo {
   transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
 }
-
-/* ------------ tailwind ------------ */
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 /* ------------ global ------------ */
 

@@ -1,4 +1,6 @@
 <script setup>
+  import { defineProps, computed, ref } from 'vue'
+
   const props = defineProps({
     type: {
       type: [String, Number],
@@ -18,7 +20,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="flex justify-center items-center">
     <div v-if="type == 1" class="loader loader--style1" title="0">
       <svg
         version="1.1"
@@ -455,7 +457,7 @@
     height: 100%;
   }
   .loader {
-    margin: 0 0 2em;
+    margin: 0;
     width: v-bind(size);
     height: v-bind(size);
   }

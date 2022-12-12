@@ -47,11 +47,11 @@
       </ul>
     </div>
     <div
-      class="w-full ml-8 mr-6 flex justify-center !duration-300"
+      class="w-full mr-6 flex justify-center !duration-300"
       :class="route.path === '/' && 'pointer-events-none opacity-0'"
     >
       <label>
-        <Icon
+        <tb-icon
           name="search"
           class="translate-x-[46px] text-base-content !duration-150"
         />
@@ -73,8 +73,8 @@
             tabindex="0"
             class="flex items-center gap-1 cursor-pointer pr-2 !rounded-box"
           >
-            <Icon name="swatch" class="text-base-content" />
-            <Icon name="dropdown" class="text-base-content" />
+            <tb-icon name="swatch" class="text-base-content" />
+            <tb-icon name="dropdown" class="text-base-content" />
           </label>
           <ul
             tabindex="0"
@@ -105,7 +105,7 @@
             target="_blank"
             class="!rounded-box pl-4"
           >
-            <Icon name="github" class="text-base-content" />
+            <tb-icon name="github" class="text-base-content" />
           </a>
         </li>
       </ul>
@@ -119,12 +119,12 @@
   }
   li a,
   li label {
-    @apply text-base-content rounded active:bg-base-200;
+    @apply text-base-content/50 rounded active:bg-base-200;
   }
   li a:active {
     @apply scale-95;
   }
   a.router-link-exact-active {
-    @apply !text-primary bg-transparent;
+    @apply !text-base-content bg-transparent;
   }
 </style>
