@@ -17,6 +17,10 @@
   justify-content: center;
 }
 
+main {
+  transition: 1s ease;
+}
+
 /* ------------ effects ------------ */
 
 .gradient-blur {

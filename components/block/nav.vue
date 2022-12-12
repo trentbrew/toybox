@@ -22,10 +22,9 @@
     class="fixed navbar px-6 py-4 z-10"
     :class="
       route.path !== '/'
-        ? `bg-base-100 border-base-200 ${
-            state.scroll > 0 ? 'border-b-2' : 'border-b-0'
-          }`
-        : 'border-b-0 bg-transparent'
+        ? 'backdrop-blur-xl' +
+          `border-base-200 ${state.scroll > 0 ? 'border-b-2' : 'border-b-0'}`
+        : 'border-b-0'
     "
   >
     <div class="navbar-start w-auto">

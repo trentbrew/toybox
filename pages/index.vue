@@ -1,8 +1,6 @@
-<script setup></script>
-
 <template>
-  <main class="hero bg-base-100 absolute top-0 left-0 h-screen overflow-hidden">
-    <EffectGradient class="absolute top-0 opacity-[0.5]" />
+  <main class="hero absolute top-0 left-0 h-screen overflow-hidden">
+    <EffectGradient />
     <div class="hero-content text-center">
       <div class="max-w-md">
         <h1 class="text-5xl font-bold">toybox</h1>
@@ -26,7 +24,7 @@
             href="https://github.com/trentbrew/toybox#readme"
             text="Get started"
             icon="open"
-            class="btn-primary"
+            class="btn-primary rounded-full"
           />
         </div>
       </div>
