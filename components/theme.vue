@@ -7,6 +7,10 @@
       default: '',
       required: true,
     },
+    label: {
+      type: String,
+      default: null,
+    },
   })
 </script>
 
@@ -16,7 +20,7 @@
       @click="global.setTheme(props.name.toLowerCase())"
       class="flex justify-between items-center"
     >
-      <span>{{ props.name }}</span>
+      <span>{{ props.label || props.name }}</span>
       <div class="flex gap-1">
         <div
           :data-theme="props.name"

@@ -60,7 +60,7 @@
         v-model="state.search"
         type="text"
         aria-label="Search icon"
-        class="input input-lg pl-16 rounded-box w-full bg-base-300/80 focus:!outline-none text-base-content"
+        class="input input-lg pl-16 rounded-box w-full bg-base-300/60 focus:!outline-none text-base-content"
         :class="route.path === '/' && 'scale-95'"
       />
     </div>
@@ -80,7 +80,8 @@
             tabindex="0"
             class="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-80"
           >
-            <Theme name="cmyk" />
+            <Theme name="cmyk" label="light" />
+            <Theme name="business" label="dark" />
             <Theme name="pastel" />
             <Theme name="emerald" />
             <Theme name="autumn" />
@@ -92,7 +93,6 @@
             <Theme name="lemonade" />
             <Theme name="aqua" />
             <Theme name="coffee" />
-            <Theme name="business" />
             <Theme name="forest" />
             <Theme name="night" />
             <Theme name="black" />
@@ -119,12 +119,12 @@
   }
   li a,
   li label {
-    @apply text-base-content/50 rounded active:bg-base-200;
+    @apply text-base-content rounded active:bg-base-200;
   }
   li a:active {
     @apply scale-95;
   }
   a.router-link-exact-active {
-    @apply !text-base-content bg-transparent;
+    @apply !text-primary bg-transparent;
   }
 </style>

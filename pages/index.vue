@@ -1,6 +1,10 @@
+<script setup>
+  const global = useGlobalStore()
+</script>
+
 <template>
   <main class="hero absolute top-0 left-0 h-screen overflow-hidden">
-    <EffectGradient />
+    <EffectGradientMesh />
     <div class="hero-content text-center">
       <div class="max-w-md">
         <h1 class="text-5xl font-bold">toybox</h1>
@@ -20,11 +24,12 @@
         </p>
         <br />
         <div class="flex gap-4 justify-center">
-          <Button
-            href="https://github.com/trentbrew/toybox#readme"
+          <tb-button
+            type="animated"
+            to="https://github.com/trentbrew/toybox#readme"
+            newtab
             text="Get started"
-            icon="open"
-            class="btn-primary rounded-full"
+            inner-class="bg-primary"
           />
         </div>
       </div>

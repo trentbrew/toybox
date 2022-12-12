@@ -1,0 +1,39 @@
+{
+  "name": "toyboxui",
+  "version": "0.0.6",
+  "description": "A kit for building playful UIs for the web, powred by Nuxt, TailwindCSS, and DaisyUI.",
+  "main": "nuxt.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "nuxt3": "latest",
+    "daisyui": "latest",
+    "tailwindcss": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trentbrew/toybox.git"
+  },
+  "keywords": [
+    "nuxt",
+    "nuxt3",
+    "vue",
+    "vue3",
+    "tailwindcss",
+    "tailwind",
+    "daisyui",
+    "ui",
+    "kit",
+    "design",
+    "playful",
+    "components",
+    "icons"
+  ],
+  "author": "Trent Brew",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trentbrew/toybox/issues"
+  },
+  "homepage": "https://toybox.design"
+}

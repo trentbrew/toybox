@@ -1,7 +1,7 @@
 <br />
 <div align="center">
 
-  <a href="https://codepen.io/tbrew1023/pen/oNyOZbm">
+  <a href="https://toybox.design">
     <img src="https://user-images.githubusercontent.com/32501733/206873215-81bab10f-e181-4fd9-916a-131fcbf6e217.png" width="100" height="100" />
   </a>
 
@@ -9,14 +9,13 @@
   <p align="center">
     <a href="https://toybox.design/components" target="_blank">Components</a> ·
     <a href="https://toybox.design/icons" target="_blank">Icons</a> ·
-    <a href="https://npmjs.com/package/toyboxui" target="_blank">NPM</a> ·
     <a href="https://toybox.design/api/v1/icons" target="_blank">API</a>
   </p>
 </div>
 
 ## About
 
-Toybox is a collection of components and icons for quickly building playful UIs for the web. Toybox is built with [Nuxt](https://nuxt.com/docs/getting-started/introduction), [TailwindCSS](https://tailwindcss.com/docs), and [DaisyUI](https://daisyui.com).
+Toybox is a collection of components and icons for quickly building playful UIs for the web, built with [Nuxt](https://nuxt.com/docs/getting-started/introduction), [TailwindCSS](https://tailwindcss.com/docs), and [DaisyUI](https://daisyui.com).
 
 ## Icons API
 
