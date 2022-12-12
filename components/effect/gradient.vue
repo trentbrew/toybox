@@ -3,16 +3,18 @@
 
   const global = useGlobalStore()
 
-  const state = reactive({
-    ready: false,
-  })
+  const ready = computed(() => global.gradientReady)
 
   function runGradient() {
-    const gradient = new Gradient()
-    gradient.initGradient('#gradient-canvas')
-    setTimeout(() => {
-      state.ready = true
-    }, 4000)
+    if (ready) {
+      const self = global
+      self.setGradientLoading(true)
+      const gradient = new Gradient()
+      gradient.initGradient('#gradient-canvas')
+      setTimeout(() => {
+        self.setGradientLoading(false)
+      }, 4000)
+    }
   }
 
   onMounted(() => {
@@ -22,8 +24,7 @@
   watch(
     () => global.theme,
     () => {
-      state.ready = false
-      runGradient()
+      if (global.gradientReady) runGradient()
     }
   )
 </script>
@@ -48,7 +49,7 @@
 
 <template>
   <canvas
-    :style="!state.ready ? 'opacity: 0' : 'opacity: 0.16'"
+    :style="!ready ? 'opacity: 0' : 'opacity: 0.16'"
     id="gradient-canvas"
   ></canvas>
 </template>

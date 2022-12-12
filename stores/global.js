@@ -2,6 +2,9 @@ export const useGlobalStore = defineStore('global', {
   state: () => ({
     ui: {
       theme: 'cmyk',
+      gradient: {
+        loading: false,
+      },
     },
     search: {
       query: '',
@@ -10,14 +13,17 @@ export const useGlobalStore = defineStore('global', {
   getters: {
     theme: state => state.ui.theme,
     query: state => state.search.query,
+    gradientReady: state => !state.ui.gradient.loading,
   },
   actions: {
     setTheme(theme) {
       this.ui.theme = theme
     },
     updateQuery(query) {
-      console.log('updateQuery: ', query)
       this.search.query = query
+    },
+    setGradientLoading(payload) {
+      this.ui.gradient.loading = payload
     },
   },
 })
