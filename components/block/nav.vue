@@ -23,7 +23,7 @@
     class="fixed navbar px-6 py-4 z-10"
     :class="
       route.path !== '/'
-        ? `backdrop-blur-xl bg-base-100/50 backdrop-saturate-150 border-base-200 ${
+        ? `backdrop-blur-xl bg-base-100/60 border-base-200 ${
             state.scroll > 0 ? 'border-b-[1px]' : 'border-b-0'
           }`
         : 'border-b-0'
