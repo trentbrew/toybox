@@ -23,8 +23,8 @@
     class="fixed navbar px-6 py-4 z-10"
     :class="
       route.path !== '/'
-        ? `backdrop-blur-xl bg-base-100/60 border-base-200 ${
-            state.scroll > 0 ? 'border-b-[1px]' : 'border-b-0'
+        ? `backdrop-blur-xl bg-base-100 border-base-200 ${
+            state.scroll > 0 ? 'border-b-[2px]' : 'border-b-0'
           }`
         : 'border-b-0'
     "
@@ -60,7 +60,7 @@
         v-model="state.search"
         type="text"
         aria-label="Search icon"
-        class="input input-lg pl-16 rounded-box w-full bg-base-300/60 focus:!outline-none text-base-content"
+        class="input input-lg pl-16 rounded-box w-full bg-base-200 focus:!outline-none text-base-content"
         :class="route.path === '/' && 'scale-95'"
       />
     </div>

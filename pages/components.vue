@@ -12,7 +12,7 @@
         age: 25,
       },
       {
-        name: 'Derrck',
+        name: 'Derrick',
         birthday: '11/22/1995',
         age: 27,
       },

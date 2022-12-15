@@ -64,7 +64,8 @@
       >
         <li
           @click="downloadSVG(icon)"
-          class="w-full flex justify-between items-center rounded-box p-6 bg-base-100 hover:scale-[1.02] cursor-pointer group !duration-150 active:scale-[1.01] active:bg-base-100 active:shadow-sm"
+          style="transition: 150ms"
+          class="w-full flex justify-between items-center rounded-box p-6 bg-base-100 cursor-pointer group active:bg-base-100 active:shadow-sm hover:border-primary border-transparent border-2 hover:border-l-8"
         >
           <div class="left flex items-center gap-3">
             <div v-html="icon.svg" class="text-base-content"></div>
@@ -78,9 +79,9 @@
             <tb-icon
               v-if="!state.downloading"
               name="download"
-              class="text-secondary"
+              class="text-primary"
             />
-            <tb-loader v-else type="3" size="24" class="text-secondary" />
+            <tb-loader v-else type="3" size="24" class="text-primary" />
           </div>
         </li>
         <a
