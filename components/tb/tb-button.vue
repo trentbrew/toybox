@@ -30,7 +30,7 @@
     :to="props.to || props.href"
     :target="props.newtab ? '_blank' : '_self'"
   >
-    <button class="btn rounded flex gap-3" :class="props.innerClass">
+    <button class="btn rounded flex gap-3 min-w-max" :class="props.innerClass">
       <span>{{ props.text }}</span>
       <tb-icon
         v-if="props.icon || props.newtab"

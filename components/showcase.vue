@@ -9,7 +9,7 @@
 
 <template>
   <div
-    class="rounded-box w-full bg-base-100 p-2 flex flex-col justify-center items-center"
+    class="rounded-box w-full bg-transparent p-2 flex flex-col justify-center items-center"
   >
     <div class="flex justify-between items-center w-full pl-3">
       <h1 class="m-0 text-base font-bold text-base-content">
@@ -17,7 +17,7 @@
       </h1>
       <tb-button
         text="</>"
-        inner-class="btn-xs btn-secondary rounded-box w-max"
+        inner-class="btn-xs btn-primary rounded-full w-max"
       />
     </div>
     <div

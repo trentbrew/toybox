@@ -64,8 +64,8 @@
       >
         <li
           @click="downloadSVG(icon)"
-          style="transition: 150ms"
-          class="w-full flex justify-between items-center rounded-box p-6 bg-base-100 cursor-pointer group active:bg-base-100 active:shadow-sm hover:border-primary border-transparent border-2 hover:border-l-8"
+          style="transition: 75ms"
+          class="w-full flex justify-between items-center rounded-box p-6 bg-base-100 cursor-pointer group active:bg-base-200 active:scale-95 hover:border-primary border-transparent border-2"
         >
           <div class="left flex items-center gap-3">
             <div v-html="icon.svg" class="text-base-content"></div>

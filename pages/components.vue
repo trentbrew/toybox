@@ -31,6 +31,37 @@
       <Showcase title="table">
         <tb-table :data="state.testData" />
       </Showcase>
+      <Showcase title="button">
+        <div class="flex justify-center items-center gap-4">
+          <tb-button text="OK" />
+          <tb-button
+            text="Vist a link"
+            to="https://github.com/trentbrew/toybox"
+            newtab
+            inner-class="btn-secondary"
+          />
+          <tb-button
+            text="Run some code"
+            icon="code"
+            @click="
+              () => {
+                alert('handling button click')
+              }
+            "
+            inner-class="btn-accent"
+          />
+          <tb-button
+            text="Handle warning"
+            icon="warning"
+            inner-class="btn-warning"
+          />
+          <tb-button
+            text="Handle Error"
+            icon="refresh"
+            inner-class="btn-error"
+          />
+        </div>
+      </Showcase>
     </div>
     <div class="w-full">
       <Showcase title="loader">
