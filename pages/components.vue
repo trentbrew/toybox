@@ -23,6 +23,10 @@
       },
     ],
   })
+
+  function handleButtonAction() {
+    alert('button clicked 👋🏾')
+  }
 </script>
 
 <template>
@@ -33,32 +37,14 @@
       </Showcase>
       <Showcase title="button">
         <div class="flex justify-center items-center gap-4">
-          <tb-button text="OK" />
+          <tb-button label="Button" />
+          <tb-button type="primary" label="Button with icon" icon="star" />
+          <tb-button type="secondary" label="Vist a link" to="#" newtab />
           <tb-button
-            text="Vist a link"
-            to="https://github.com/trentbrew/toybox"
-            newtab
-            inner-class="btn-secondary"
-          />
-          <tb-button
-            text="Run some code"
+            type="accent"
+            label="Run some code"
             icon="code"
-            @click="
-              () => {
-                alert('handling button click')
-              }
-            "
-            inner-class="btn-accent"
-          />
-          <tb-button
-            text="Handle warning"
-            icon="warning"
-            inner-class="btn-warning"
-          />
-          <tb-button
-            text="Handle Error"
-            icon="refresh"
-            inner-class="btn-error"
+            @click="handleButtonAction"
           />
         </div>
       </Showcase>
