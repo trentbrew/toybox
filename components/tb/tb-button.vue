@@ -29,7 +29,6 @@
   })
 
   const btnClass = computed(() => (props.type ? `btn-${props.type}` : ''))
-
   const iconClass = computed(() =>
     props.type ? `text-${props.type}-content` : ''
   )
@@ -44,7 +43,7 @@
       <span>{{ props.label }}</span>
       <tb-icon
         v-if="props.icon || props.newtab"
-        :style="`color: var(hsl(var(--${props.type[0]}c)));`"
+        :class="iconClass"
         :name="props.icon ? props.icon : props.newtab ? 'open' : 'star_active'"
         size="18"
       />

@@ -20,6 +20,7 @@
         inner-class="btn-xs btn-primary rounded-full w-max"
       />
     </div>
+    .
     <div
       class="bg-base-100 w-full rounded-box flex justify-center items-center mt-2 p-16"
     >
