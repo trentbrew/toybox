@@ -1,5 +1,10 @@
 <script setup>
   const state = reactive({
+    toggle: {
+      opt1: false,
+      opt2: false,
+      opt3: false,
+    },
     testData: [
       {
         name: 'Lauren',
@@ -38,10 +43,19 @@
       <Showcase title="button">
         <div class="flex justify-center items-center gap-4">
           <tb-button label="Button" />
-          <tb-button type="primary" label="Button with icon" icon="star" />
-          <tb-button type="secondary" label="Vist a link" to="#" newtab />
           <tb-button
-            type="accent"
+            inner-class="btn-primary"
+            label="Button with icon"
+            icon="star"
+          />
+          <tb-button
+            inner-class="btn-secondary"
+            label="visit a link"
+            to="#"
+            newtab
+          />
+          <tb-button
+            inner-class="btn-accent"
             label="Run some code"
             icon="code"
             @click="handleButtonAction"
@@ -61,6 +75,31 @@
           <tb-loader type="7" size="32" class="text-primary" />
           <tb-loader type="8" size="32" class="text-primary" />
         </div>
+      </Showcase>
+      <Showcase title="toggle">
+        <ul class="w-full">
+          <li>
+            <tb-toggle
+              v-model="state.toggle.opt1"
+              label="Item 1"
+              inner-class="toggle-primary"
+            />
+          </li>
+          <li>
+            <tb-toggle
+              v-model="state.toggle.opt2"
+              label="Item 2"
+              inner-class="toggle-primary"
+            />
+          </li>
+          <li>
+            <tb-toggle
+              v-model="state.toggle.opt3"
+              label="Item 3"
+              inner-class="toggle-primary"
+            />
+          </li>
+        </ul>
       </Showcase>
     </div>
   </main>

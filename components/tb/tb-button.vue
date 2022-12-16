@@ -10,6 +10,10 @@
       type: String,
       default: 'neutral',
     },
+    size: {
+      type: String,
+      default: 'md',
+    },
     to: {
       type: String,
       default: '',
@@ -28,10 +32,7 @@
     },
   })
 
-  const btnClass = computed(() => (props.type ? `btn-${props.type}` : ''))
-  const iconClass = computed(() =>
-    props.type ? `text-${props.type}-content` : ''
-  )
+  const btnColor = computed(() => (props.type ? ` btn-${props.type}` : ''))
 </script>
 
 <template>
@@ -39,11 +40,14 @@
     :to="props.to || props.href"
     :target="props.newtab ? '_blank' : '_self'"
   >
-    <button class="btn rounded flex gap-3 min-w-max" :class="btnClass">
+    <button
+      :class="props.innerClass + btnColor"
+      class="btn flex gap-3 min-w-max"
+    >
       <span>{{ props.label }}</span>
       <tb-icon
+        class="text-inherit"
         v-if="props.icon || props.newtab"
-        :class="iconClass"
         :name="props.icon ? props.icon : props.newtab ? 'open' : 'star_active'"
         size="18"
       />
