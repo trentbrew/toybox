@@ -25,10 +25,10 @@
         <br />
         <div class="flex gap-4 justify-center">
           <tb-button
+            label="Get started"
             inner-class="btn-primary"
             to="https://github.com/trentbrew/toybox#readme"
             newtab
-            text="Get started"
           />
         </div>
       </div>
