@@ -34,14 +34,14 @@
         <Logo />
       </NuxtLink>
       <ul class="menu menu-horizontal min-w-fit">
-        <li id="components-link">
-          <NuxtLink href="/components" class="rounded-box">
-            <span>Components</span>
-          </NuxtLink>
-        </li>
         <li id="icons-link">
           <NuxtLink to="/icons" class="rounded-box">
             <span>Icons</span>
+          </NuxtLink>
+        </li>
+        <li id="components-link">
+          <NuxtLink href="/components" class="rounded-box">
+            <span>Components</span>
           </NuxtLink>
         </li>
       </ul>
