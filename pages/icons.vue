@@ -37,9 +37,9 @@
     const url = URL.createObjectURL(blob)
     state.url = url
     setTimeout(() => {
-      download.value.filter(item => item.id === icon.name)[0].click()
       state.downloading = false
-    }, 500)
+      download.value.filter(item => item.id === icon.name)[0].click()
+    }, 800)
   }
 
   watch(
@@ -65,7 +65,7 @@
         <li
           @click="downloadSVG(icon)"
           style="transition: 75ms"
-          class="w-full flex justify-between items-center rounded-box p-6 bg-base-100 cursor-pointer group active:bg-base-200 active:scale-95 hover:border-primary border-transparent border-2"
+          class="w-full flex justify-between items-center rounded-box p-6 bg-base-100 cursor-pointer group active:scale-99 hover:border-primary border-transparent border-2"
         >
           <div class="left flex items-center gap-3">
             <div v-html="icon.svg" class="text-base-content"></div>
@@ -87,7 +87,7 @@
         <a
           :id="icon.name"
           ref="download"
-          class="absolute hidden"
+          class="absolute top-0 left-0 hidden pointer-events-none"
           :download="icon.name"
           :href="state.url"
         ></a>

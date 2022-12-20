@@ -1,7 +1,7 @@
 export const useGlobalStore = defineStore('global', {
   state: () => ({
     ui: {
-      theme: 'cmyk',
+      theme: 'dark',
       gradient: {
         loading: false,
       },

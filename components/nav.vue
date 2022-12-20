@@ -80,6 +80,7 @@
             tabindex="0"
             class="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-80"
           >
+            <Theme name="dark" label="galaxy" />
             <Theme name="cmyk" label="light" />
             <Theme name="business" label="dark" />
             <Theme name="pastel" />
@@ -89,7 +90,6 @@
             <Theme name="wireframe" />
             <Theme name="retro" />
             <Theme name="valentine" />
-            <Theme name="garden" />
             <Theme name="lemonade" />
             <Theme name="aqua" />
             <Theme name="coffee" />

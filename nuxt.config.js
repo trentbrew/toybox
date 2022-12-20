@@ -19,6 +19,12 @@ export default defineNuxtConfig({
 
   modules: [
     [
+      '@vueuse/nuxt',
+      {
+        autoImports: ['useLocalStorage', ['useLocalStorage']],
+      },
+    ],
+    [
       '@pinia/nuxt',
       { autoImports: ['defineStore', ['defineStore', 'definePiniaStore']] },
     ],

@@ -29,6 +29,13 @@
   )
 </script>
 
+<template>
+  <canvas
+    :style="!ready ? 'opacity: 0' : 'opacity: 0.5'"
+    id="gradient-canvas"
+  ></canvas>
+</template>
+
 <style scoped>
   #gradient-canvas {
     position: absolute;
@@ -46,10 +53,3 @@
     --gradient-color-4: hsl(var(--b1));
   }
 </style>
-
-<template>
-  <canvas
-    :style="!ready ? 'opacity: 0' : 'opacity: 0.3'"
-    id="gradient-canvas"
-  ></canvas>
-</template>

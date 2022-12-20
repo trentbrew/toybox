@@ -20,6 +20,7 @@
     "@nuxtjs/proxy": "^2.1.0",
     "@pinia/nuxt": "^0.4.6",
     "@supabase/supabase-js": "^2.1.1",
+    "@vueuse/nuxt": "^9.7.0",
     "cors": "^2.8.5",
     "daisyui": "^2.42.1",
     "eslint-plugin-prettier": "^4.2.1",
