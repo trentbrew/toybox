@@ -1,12 +1,11 @@
 <script setup>
   const global = useGlobalStore()
 
-  // onMounted(() => {
-  //   console.log('global state: ', global)
-  //   window.addEventListener('keydown', e => {
-  //     if (e.key === '\\') window.open('/debug/bear', '_self')
-  //   })
-  // })
+  onMounted(() => {
+    window.addEventListener('keydown', e => {
+      if (e.key === '\\') window.open('/debug/bear', '_self')
+    })
+  })
 </script>
 
 <template>

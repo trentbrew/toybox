@@ -44,19 +44,19 @@ export const useGlobalStore = defineStore('global', {
             type: 'dark',
           },
           {
-            name: 'night',
-            type: 'dark',
-          },
-          {
             name: 'dark',
             type: 'dark',
           },
           {
-            name: 'coffee',
+            name: 'business',
             type: 'dark',
           },
           {
-            name: 'business',
+            name: 'night',
+            type: 'dark',
+          },
+          {
+            name: 'coffee',
             type: 'dark',
           },
           {

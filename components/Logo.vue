@@ -182,16 +182,17 @@
 <style scoped>
   #bear {
     cursor: pointer;
+    --duration: 0.5s;
   }
   #bear g.bear__head {
-    transition: 500ms cubic-bezier(0.34, 1.56, 0.25, 0.95);
+    transition: var(--duration) cubic-bezier(0.34, 2, 0.25, 0.95);
     transform-origin: 260px 100px;
   }
   #bear g.bear__ear--left {
-    transition: 500ms cubic-bezier(0.69, -1.07, 0.33, 1.87);
+    transition: var(--duration) cubic-bezier(0.69, -1.07, 0.33, 2);
   }
   #bear g.bear__ear--right {
-    transition: 500ms cubic-bezier(0.69, -1.07, 0.33, 1.87);
+    transition: var(--duration) cubic-bezier(0.69, -1.07, 0.33, 2);
   }
   #bear:hover g.bear__head {
     transform: rotate(20deg) translate(40px, 3px);
