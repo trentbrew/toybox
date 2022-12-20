@@ -182,7 +182,7 @@
 <style scoped>
   #bear {
     cursor: pointer;
-    --duration: 0.5s;
+    --duration: 0.7s;
   }
   #bear g.bear__head {
     transition: var(--duration) cubic-bezier(0.34, 2, 0.25, 0.95);

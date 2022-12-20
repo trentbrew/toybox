@@ -50,10 +50,10 @@
 <template>
   <main class="w-full flex gap-3">
     <div class="w-full">
-      <Showcase title="tb-table">
+      <Showcase title="table">
         <tb-table :data="state.tableData" />
       </Showcase>
-      <Showcase title="tb-button">
+      <Showcase title="button">
         <div class="flex justify-center items-center gap-4">
           <tb-button inner-class="btn-primary" label="Button" />
           <tb-button
@@ -70,22 +70,57 @@
           />
         </div>
       </Showcase>
-    </div>
-    <div class="w-full">
-      <Showcase title="tb-loader">
+      <Showcase title="loader">
         <div class="w-full max-w-[50%] grid grid-cols-4 gap-y-12">
-          <tb-loader type="1" size="32" class="text-accent" />
-          <tb-loader type="2" size="32" class="text-accent" />
-          <tb-loader type="3" size="32" class="text-accent" />
-          <tb-loader type="4" size="32" class="text-accent" />
-          <tb-loader type="5" size="32" class="text-accent" />
-          <tb-loader type="6" size="32" class="text-accent" />
-          <tb-loader type="7" size="32" class="text-accent" />
-          <tb-loader type="8" size="32" class="text-accent" />
+          <tb-loader type="1" size="32" class="text-primary" />
+          <tb-loader type="2" size="32" class="text-primary" />
+          <tb-loader type="3" size="32" class="text-primary" />
+          <tb-loader type="4" size="32" class="text-primary" />
+          <tb-loader type="5" size="32" class="text-primary" />
+          <tb-loader type="6" size="32" class="text-primary" />
+          <tb-loader type="7" size="32" class="text-primary" />
+          <tb-loader type="8" size="32" class="text-primary" />
         </div>
       </Showcase>
-      <Showcase title="tb-toggle-list">
+    </div>
+    <div class="w-full">
+      <Showcase title="toggle list">
         <tb-toggle-list :items="state.toggleItems" @change="handleToggle" />
+      </Showcase>
+      <Showcase title="accordion">
+        <tb-accordion>
+          <tb-accordion-item title="Item 1">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </tb-accordion-item>
+          <tb-accordion-item title="Item 2">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+              dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur.
+            </p>
+          </tb-accordion-item>
+          <tb-accordion-item title="Item 3">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
+            </p>
+          </tb-accordion-item>
+        </tb-accordion>
       </Showcase>
     </div>
   </main>

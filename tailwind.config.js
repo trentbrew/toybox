@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      border: {
+        DEFAULT: '1.5px',
+      },
       borderRadius: {
         DEFAULT: '6px',
       },

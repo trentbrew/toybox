@@ -30,11 +30,13 @@
 </script>
 
 <template>
-  <div class="form-control w-full">
+  <div class="form-control w-full group">
     <label class="cursor-pointer label p-0 w-full">
-      <span v-if="props.label" class="label-text text-base">{{
-        props.label
-      }}</span>
+      <span
+        v-if="props.label"
+        class="label-text text-base group-hover:text-primary"
+        >{{ props.label }}</span
+      >
       <input
         type="checkbox"
         class="toggle"

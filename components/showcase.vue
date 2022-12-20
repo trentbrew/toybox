@@ -17,7 +17,7 @@
       <h1 class="m-0 text-base font-bold text-base-content">
         {{ props.title }}
       </h1>
-      <tb-button label="</>" type="secondary" inner-class="btn-xs" />
+      <tb-button label="</>" type="primary" inner-class="btn-xs" />
     </div>
     <div
       class="bg-base-100 w-full rounded-box rounded-t-none flex justify-center items-center p-16"
