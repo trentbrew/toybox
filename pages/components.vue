@@ -41,22 +41,21 @@
   function handleButtonAction() {
     alert('button clicked 👋🏾')
   }
+
+  function handleToggle(item) {
+    console.log(`${item.name} has been set to ${item.value}`)
+  }
 </script>
 
 <template>
   <main class="w-full flex gap-3">
     <div class="w-full">
-      <Showcase title="table">
+      <Showcase title="tb-table">
         <tb-table :data="state.tableData" />
       </Showcase>
-      <Showcase title="button">
+      <Showcase title="tb-button">
         <div class="flex justify-center items-center gap-4">
-          <tb-button label="Button" />
-          <tb-button
-            inner-class="btn-primary"
-            label="Button with icon"
-            icon="star"
-          />
+          <tb-button inner-class="btn-primary" label="Button" />
           <tb-button
             inner-class="btn-secondary"
             label="visit a link"
@@ -73,7 +72,7 @@
       </Showcase>
     </div>
     <div class="w-full">
-      <Showcase title="loader">
+      <Showcase title="tb-loader">
         <div class="w-full max-w-[50%] grid grid-cols-4 gap-y-12">
           <tb-loader type="1" size="32" class="text-accent" />
           <tb-loader type="2" size="32" class="text-accent" />
@@ -85,21 +84,8 @@
           <tb-loader type="8" size="32" class="text-accent" />
         </div>
       </Showcase>
-      <Showcase title="toggle list">
-        <ul class="w-full">
-          <li
-            v-for="(item, index) in state.toggleItems"
-            :key="index"
-            class="rounded-full hover:bg-base-300 pl-3 pr-1"
-          >
-            <tb-toggle
-              v-model="state.toggleItems[index].value"
-              :label="item.label"
-              :checked="item.value"
-              inner-class="toggle-accent"
-            />
-          </li>
-        </ul>
+      <Showcase title="tb-toggle-list">
+        <tb-toggle-list :items="state.toggleItems" @change="handleToggle" />
       </Showcase>
     </div>
   </main>

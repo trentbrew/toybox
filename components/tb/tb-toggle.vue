@@ -31,7 +31,7 @@
 
 <template>
   <div class="form-control w-full">
-    <label class="cursor-pointer label w-full">
+    <label class="cursor-pointer label p-0 w-full">
       <span v-if="props.label" class="label-text text-base">{{
         props.label
       }}</span>
