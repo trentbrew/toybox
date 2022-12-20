@@ -95,8 +95,13 @@
             href="https://nuxt.com/docs/getting-started/introduction"
             target="_blank"
             >Nuxt</a
-          >
-          and
+          >,
+          <a
+            class="hover:underline text-primary"
+            href="https://tailwindcss.com"
+            target="_blank"
+            >TailwindCSS</a
+          >, and
           <a
             class="hover:underline text-primary"
             href="https://daisyui.com"
@@ -106,16 +111,16 @@
         </p>
         <div class="flex gap-3 mt-4">
           <tb-button
-            type="primary"
-            label="Icons API"
-            to="https://toybox.design/api/v1/icons"
-            icon="globe"
-          />
-          <tb-button
-            inner-class="btn-outline btn-primary"
+            inner-class="btn-primary"
             label="Contribute"
             newtab
             to="https://github.com/trentbrew/toybox"
+          />
+          <tb-button
+            inner-class="btn-outline btn-primary"
+            label="Icons API"
+            to="https://toybox.design/api/v1/icons"
+            icon="globe"
           />
         </div>
       </div>
