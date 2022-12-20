@@ -55,6 +55,26 @@
 
 <template>
   <main>
+    <!-- <div class="hero min-h-[50vh]">
+      <div
+        class="hero-content text-center flex flex-col justify-center items-center"
+      >
+        <div
+          class="max-w-xl flex flex-col justify-center items-center text-base-content"
+        >
+          <h1 class="text-5xl">Icons</h1>
+          <p class="py-6">
+            SVGs can be downloaded below, or fetched using the API.
+          </p>
+          <tb-button
+            type="primary"
+            label="Explore the API"
+            newtab
+            to="/api/v1/icons"
+          />
+        </div>
+      </div>
+    </div> -->
     <ul class="w-full grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-3">
       <div
         v-for="(icon, index) in state.filtered"
@@ -81,12 +101,18 @@
           <div
             class="opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100 !duration-75 w-6 h-6 flex justify-center items-cenmter"
           >
+            <!-- <tb-icon name="copy" class="text-primary"></tb-icon> -->
             <tb-icon
-              v-if="!state.downloading"
+              v-show="!state.downloading"
               name="download"
               class="text-primary"
             />
-            <tb-loader v-else type="3" size="24" class="text-primary" />
+            <tb-loader
+              v-show="state.downloading"
+              type="3"
+              size="24"
+              class="text-primary"
+            />
           </div>
         </li>
         <a

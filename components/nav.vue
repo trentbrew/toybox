@@ -23,35 +23,28 @@
   <nav
     v-scroll="handleScroll"
     class="fixed navbar px-6 py-4 z-10"
-    :class="
-      route.path !== '/'
-        ? `backdrop-blur-xl bg-base-100 border-base-200 ${
-            state.scroll > 0 ? 'border-b-[1.5px]' : 'border-b-0'
-          }`
-        : 'border-b-0'
-    "
+    :class="`backdrop-blur-xl bg-base-100 border-base-200 ${
+      state.scroll > 0 ? 'border-b-[1.5px]' : 'border-b-0'
+    }`"
   >
     <div class="navbar-start w-auto">
-      <NuxtLink id="logo" to="/" class="mr-3 active:scale-95">
-        <Logo />
-      </NuxtLink>
-      <ul class="menu menu-horizontal min-w-fit">
+      <!-- <a href="https://trentbrew.com" target="_blank"> -->
+      <Logo />
+      <!-- </a> -->
+      <ul class="menu menu-horizontal min-w-fit ml-3">
+        <li id="components-link">
+          <NuxtLink href="/" class="rounded-box">
+            <span>Components</span>
+          </NuxtLink>
+        </li>
         <li id="icons-link">
           <NuxtLink to="/icons" class="rounded-box">
             <span>Icons</span>
           </NuxtLink>
         </li>
-        <li id="components-link">
-          <NuxtLink href="/components" class="rounded-box">
-            <span>Components</span>
-          </NuxtLink>
-        </li>
       </ul>
     </div>
-    <div
-      class="w-full mr-6 flex justify-center !duration-300"
-      :class="route.path === '/' && 'pointer-events-none opacity-0'"
-    >
+    <div class="w-full mr-6 flex justify-center !duration-300">
       <label>
         <tb-icon
           name="search"
@@ -63,7 +56,6 @@
         type="text"
         aria-label="Search icon"
         class="input input-lg pl-16 rounded-box w-full bg-base-200 focus:!outline-none text-base-content"
-        :class="route.path === '/' && 'scale-95'"
       />
     </div>
     <div class="navbar-end hidden lg:flex w-auto">

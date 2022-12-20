@@ -54,7 +54,7 @@
         :class="state.expanded ? 'text-primary' : 'group-hover:text-primary'"
       >
         <span>{{ props.title }}</span>
-        <Icon
+        <tb-icon
           class="duration-300"
           :class="state.expanded && 'rotate-180'"
           name="dropdown"

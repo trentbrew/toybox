@@ -11,7 +11,7 @@
 <template>
   <Html :data-theme="global.theme.name">
     <Head>
-      <Title>Toybox</Title>
+      <Title>toyboxUI</Title>
     </Head>
     <NuxtLayout />
   </Html>

@@ -17,14 +17,14 @@
     xmlns="http://www.w3.org/2000/svg"
   >
     <circle
-      class="bear__tummy fill-accent"
+      class="bear__tummy fill-primary"
       cx="248.928"
       cy="308.277"
       r="72.1388"
       fill="#ABABAB"
     />
     <ellipse
-      class="bear__leg bear__leg--right fill-accent"
+      class="bear__leg bear__leg--right fill-primary"
       cx="143.41"
       cy="352.628"
       rx="74.4411"
@@ -33,7 +33,7 @@
       fill="#D9D9D9"
     />
     <ellipse
-      class="bear__leg bear__leg--left fill-accent"
+      class="bear__leg bear__leg--left fill-primary"
       rx="74.4411"
       ry="49.8832"
       transform="matrix(0.866025 0.5 0.5 -0.866025 357.515 354.163)"
@@ -41,7 +41,7 @@
     />
     <g class="bear__foot bear__foot--right">
       <ellipse
-        class="fill-accent"
+        class="fill-primary"
         cx="111.549"
         cy="335.137"
         rx="74.4411"
@@ -50,7 +50,7 @@
         fill="#D9D9D9"
       />
       <ellipse
-        class="fill-accent-focus"
+        class="fill-primary-focus"
         cx="106.944"
         cy="340.509"
         rx="56.7901"
@@ -61,7 +61,7 @@
     </g>
     <g class="bear__foot bear__foot--left">
       <ellipse
-        class="fill-accent"
+        class="fill-primary"
         cx="390.127"
         cy="335.137"
         rx="74.4411"
@@ -70,7 +70,7 @@
         fill="#D9D9D9"
       />
       <ellipse
-        class="fill-accent-focus"
+        class="fill-primary-focus"
         cx="395.499"
         cy="340.509"
         rx="56.7901"
@@ -80,14 +80,14 @@
       />
     </g>
     <path
-      class="bear__arm bear__arm--right fill-accent-focus"
+      class="bear__arm bear__arm--right fill-primary-focus"
       fill-rule="evenodd"
       clip-rule="evenodd"
       d="M185.99 224.484C185.99 216.704 186.585 209.062 187.732 201.603C161.487 228.505 145.316 265.28 145.316 305.832C145.316 336.097 154.323 364.259 169.804 387.782L184.275 404.286C191.572 410.149 200.842 413.656 210.931 413.656C234.455 413.656 253.524 394.587 253.524 371.064C253.524 359.014 248.52 348.133 240.478 340.386V339.804C207.206 312.428 185.99 270.934 185.99 224.484Z"
       fill="#C7C7C7"
     />
     <path
-      class="bear__arm bear__arm--left fill-accent-focus"
+      class="bear__arm bear__arm--left fill-primary-focus"
       fill-rule="evenodd"
       clip-rule="evenodd"
       d="M314.151 224.484C314.151 216.704 313.556 209.063 312.408 201.603C338.654 228.505 354.825 265.28 354.825 305.832C354.825 336.098 345.817 364.259 330.337 387.783L315.866 404.286C308.569 410.148 299.299 413.656 289.209 413.656C265.686 413.656 246.617 394.587 246.617 371.064C246.617 359.014 251.62 348.133 259.663 340.386V339.804C292.934 312.428 314.151 270.934 314.151 224.484Z"
@@ -96,7 +96,7 @@
     <g class="bear__head">
       <g class="bear__ear bear__ear--left">
         <rect
-          class="fill-accent"
+          class="fill-primary"
           x="297.268"
           y="94.1625"
           width="103.604"
@@ -104,7 +104,7 @@
           rx="51.8018"
         />
         <rect
-          class="fill-accent-focus"
+          class="fill-primary-focus"
           x="321.058"
           y="117.953"
           width="56.7901"
@@ -114,7 +114,7 @@
       </g>
       <g class="bear__ear bear__ear--right">
         <rect
-          class="fill-accent"
+          class="fill-primary"
           x="133.804"
           y="65"
           width="103.604"
@@ -123,7 +123,7 @@
           fill="#D9D9D9"
         />
         <rect
-          class="fill-accent-focus"
+          class="fill-primary-focus"
           x="157.595"
           y="88.7904"
           width="56.7901"
@@ -133,7 +133,7 @@
         />
       </g>
       <ellipse
-        class="bear__head--nogin fill-accent"
+        class="bear__head--nogin fill-primary"
         cx="256.38"
         cy="186.422"
         rx="114.807"
@@ -142,7 +142,7 @@
         fill="#D9D9D9"
       />
       <ellipse
-        class="bear_head--snoot fill-accent-focus"
+        class="bear_head--snoot fill-primary-focus"
         cx="250.022"
         cy="227.375"
         rx="49.1641"
@@ -195,12 +195,12 @@
     transition: var(--duration) cubic-bezier(0.69, -1.07, 0.33, 2);
   }
   #bear:hover g.bear__head {
-    transform: rotate(20deg) translate(40px, 3px);
+    transform: rotate(15deg) translate(40px, 3px);
   }
   #bear:hover g.bear__ear--left {
-    transform: translate(12px, 12px);
+    transform: translate(10px, 10px);
   }
   #bear:hover g.bear__ear--right {
-    transform: translate(12px, -10px);
+    transform: translate(10px, -8px);
   }
 </style>
