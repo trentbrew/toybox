@@ -1,11 +1,20 @@
 <script setup>
   const state = reactive({
-    toggle: {
-      opt1: false,
-      opt2: false,
-      opt3: false,
-    },
-    testData: [
+    toggleItems: [
+      {
+        label: 'Option 1',
+        value: true,
+      },
+      {
+        label: 'Option 2',
+        value: false,
+      },
+      {
+        label: 'Option 3',
+        value: false,
+      },
+    ],
+    tableData: [
       {
         name: 'Lauren',
         birthday: '01/04/1999',
@@ -38,7 +47,7 @@
   <main class="w-full flex gap-3">
     <div class="w-full">
       <Showcase title="table">
-        <tb-table :data="state.testData" />
+        <tb-table :data="state.tableData" />
       </Showcase>
       <Showcase title="button">
         <div class="flex justify-center items-center gap-4">
@@ -66,37 +75,28 @@
     <div class="w-full">
       <Showcase title="loader">
         <div class="w-full max-w-[50%] grid grid-cols-4 gap-y-12">
-          <tb-loader type="1" size="32" class="text-primary" />
-          <tb-loader type="2" size="32" class="text-primary" />
-          <tb-loader type="3" size="32" class="text-primary" />
-          <tb-loader type="4" size="32" class="text-primary" />
-          <tb-loader type="5" size="32" class="text-primary" />
-          <tb-loader type="6" size="32" class="text-primary" />
-          <tb-loader type="7" size="32" class="text-primary" />
-          <tb-loader type="8" size="32" class="text-primary" />
+          <tb-loader type="1" size="32" class="text-accent" />
+          <tb-loader type="2" size="32" class="text-accent" />
+          <tb-loader type="3" size="32" class="text-accent" />
+          <tb-loader type="4" size="32" class="text-accent" />
+          <tb-loader type="5" size="32" class="text-accent" />
+          <tb-loader type="6" size="32" class="text-accent" />
+          <tb-loader type="7" size="32" class="text-accent" />
+          <tb-loader type="8" size="32" class="text-accent" />
         </div>
       </Showcase>
-      <Showcase title="toggle">
+      <Showcase title="toggle list">
         <ul class="w-full">
-          <li>
+          <li
+            v-for="(item, index) in state.toggleItems"
+            :key="index"
+            class="rounded-box hover:bg-base-200 pl-3"
+          >
             <tb-toggle
-              v-model="state.toggle.opt1"
-              label="Item 1"
-              inner-class="toggle-primary"
-            />
-          </li>
-          <li>
-            <tb-toggle
-              v-model="state.toggle.opt2"
-              label="Item 2"
-              inner-class="toggle-primary"
-            />
-          </li>
-          <li>
-            <tb-toggle
-              v-model="state.toggle.opt3"
-              label="Item 3"
-              inner-class="toggle-primary"
+              v-model="state.toggleItems[index].value"
+              :label="item.label"
+              :checked="item.value"
+              inner-class="toggle-accent"
             />
           </li>
         </ul>

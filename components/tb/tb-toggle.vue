@@ -8,7 +8,7 @@
     },
     innerClass: {
       type: String,
-      default: null,
+      default: '',
     },
     label: {
       type: String,
@@ -16,7 +16,11 @@
     },
     type: {
       type: String,
-      default: null,
+      default: 'success',
+    },
+    checked: {
+      type: Boolean,
+      default: false,
     },
   })
 
@@ -34,6 +38,7 @@
         class="toggle"
         :class="props.innerClass"
         @change="handleToggle"
+        :checked="props.modelValue"
       />
     </label>
   </div>

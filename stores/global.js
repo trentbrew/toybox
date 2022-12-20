@@ -3,10 +3,14 @@ export const useGlobalStore = defineStore('global', {
     ui: {
       themes: {
         active: {
-          name: 'pastel',
+          name: 'winter',
           type: 'light',
         },
         all: [
+          {
+            name: 'winter',
+            type: 'light',
+          },
           {
             name: 'pastel',
             type: 'light',
@@ -16,15 +20,7 @@ export const useGlobalStore = defineStore('global', {
             type: 'light',
           },
           {
-            name: 'emerald',
-            type: 'light',
-          },
-          {
             name: 'wireframe',
-            type: 'light',
-          },
-          {
-            name: 'winter',
             type: 'light',
           },
           {
