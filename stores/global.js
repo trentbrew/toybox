@@ -3,16 +3,16 @@ export const useGlobalStore = defineStore('global', {
     ui: {
       themes: {
         active: {
-          name: 'emerald',
+          name: 'cmyk',
           type: 'light',
         },
         all: [
           {
-            name: 'emerald',
+            name: 'cmyk',
             type: 'light',
           },
           {
-            name: 'cmyk',
+            name: 'emerald',
             type: 'light',
           },
           {
@@ -52,7 +52,7 @@ export const useGlobalStore = defineStore('global', {
             type: 'dark',
           },
           {
-            name: 'night',
+            name: 'forest',
             type: 'dark',
           },
           {
@@ -60,7 +60,7 @@ export const useGlobalStore = defineStore('global', {
             type: 'dark',
           },
           {
-            name: 'forest',
+            name: 'night',
             type: 'dark',
           },
           {
@@ -85,6 +85,7 @@ export const useGlobalStore = defineStore('global', {
   },
   actions: {
     setTheme(theme) {
+      console.log(`Theme set to ${theme.name}`)
       this.ui.themes.active = theme
     },
     updateQuery(query) {

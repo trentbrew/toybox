@@ -9,7 +9,7 @@
 </script>
 
 <template>
-  <Html :data-theme="global.theme">
+  <Html :data-theme="global.theme.name">
     <Head>
       <Title>Toybox</Title>
     </Head>

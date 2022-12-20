@@ -83,12 +83,7 @@
             class="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-80"
           >
             <li v-for="(theme, index) in themes" :key="index">
-              <Theme
-                :themes="themes"
-                :index="index"
-                :type="theme.type"
-                :name="theme.name"
-              />
+              <ThemePicker :theme="theme" :themes="themes" :index="index" />
             </li>
           </ul>
         </li>
