@@ -35,7 +35,7 @@
         <tr
           v-for="(item, itemIndex) in data"
           :key="itemIndex"
-          class="cursor-pointer"
+          class="hover cursor-pointer !duration-150"
         >
           <th class="font-normal text-base-content/30">{{ itemIndex }}</th>
           <td

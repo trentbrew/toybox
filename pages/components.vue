@@ -90,7 +90,7 @@
           <li
             v-for="(item, index) in state.toggleItems"
             :key="index"
-            class="rounded-box hover:bg-base-200 pl-3"
+            class="rounded-full hover:bg-base-300 pl-3 pr-1"
           >
             <tb-toggle
               v-model="state.toggleItems[index].value"

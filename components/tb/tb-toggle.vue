@@ -32,7 +32,9 @@
 <template>
   <div class="form-control w-full">
     <label class="cursor-pointer label w-full">
-      <span v-if="props.label" class="label-text">{{ props.label }}</span>
+      <span v-if="props.label" class="label-text text-base">{{
+        props.label
+      }}</span>
       <input
         type="checkbox"
         class="toggle"
