@@ -7,6 +7,8 @@
     scroll: 0,
   })
 
+  const themes = computed(() => global.themes)
+
   function handleScroll(e) {
     state.scroll = e.value
   }
@@ -80,22 +82,14 @@
             tabindex="0"
             class="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-80"
           >
-            <Theme name="dark" label="galaxy" />
-            <Theme name="cmyk" label="light" />
-            <Theme name="business" label="dark" />
-            <Theme name="pastel" />
-            <Theme name="emerald" />
-            <Theme name="autumn" />
-            <Theme name="winter" />
-            <Theme name="wireframe" />
-            <Theme name="retro" />
-            <Theme name="valentine" />
-            <Theme name="lemonade" />
-            <Theme name="aqua" />
-            <Theme name="coffee" />
-            <Theme name="forest" />
-            <Theme name="night" />
-            <Theme name="black" />
+            <li v-for="(theme, index) in themes" :key="index">
+              <Theme
+                :themes="themes"
+                :index="index"
+                :type="theme.type"
+                :name="theme.name"
+              />
+            </li>
           </ul>
         </li>
         <li>

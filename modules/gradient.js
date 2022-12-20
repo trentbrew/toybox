@@ -834,16 +834,20 @@ class Gradient {
       .map(cssPropertyName => {
         let hsl = this.computedCanvasStyle.getPropertyValue(cssPropertyName)
         let hslValues = hsl.match(/\d+/g)
-        let hex = hslToHex(hslValues[0], hslValues[1], hslValues[2])
+        let hex = hslToHex(
+          hslValues[0] ?? 0,
+          hslValues[1] ?? 0,
+          hslValues[2] ?? 0
+        )
         if (4 === hex.length) {
           const hexTemp = hex
-            .substr(1)
+            .substring(1)
             .split('')
             .map(hexTemp => hexTemp + hexTemp)
             .join('')
           hex = `#${hexTemp}`
         }
-        return hex && `0x${hex.substr(1)}`
+        return hex && `0x${hex.substring(1)}`
       })
       .filter(Boolean)
       .map(normalizeColor)

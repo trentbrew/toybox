@@ -31,7 +31,7 @@
 
 <template>
   <canvas
-    :style="!ready ? 'opacity: 0' : 'opacity: 0.5'"
+    :style="!ready ? 'opacity: 0' : 'opacity: 0.1'"
     id="gradient-canvas"
   ></canvas>
 </template>
@@ -45,7 +45,7 @@
     width: 100vw;
     height: 100vh;
     transform: scale(1.8);
-    filter: blur(12px);
+    filter: blur(0px);
     transition: opacity 1.5s cubic-bezier(0.45, 0, 0.55, 1) !important;
     --gradient-color-1: hsl(var(--p));
     --gradient-color-2: hsl(var(--s));
