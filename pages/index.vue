@@ -108,7 +108,7 @@
           <tb-button
             type="primary"
             label="Icons API"
-            to="/api/v1/icons"
+            to="https://toybox.design/api/v1/icons"
             icon="globe"
           />
           <tb-button
