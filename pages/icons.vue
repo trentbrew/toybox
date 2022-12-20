@@ -55,7 +55,7 @@
 
 <template>
   <main>
-    <ul class="w-full grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-4">
+    <ul class="w-full grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-3">
       <div
         v-for="(icon, index) in state.filtered"
         :key="index"
@@ -65,7 +65,12 @@
         <li
           @click="downloadSVG(icon)"
           style="transition: 75ms"
-          class="w-full flex justify-between items-center rounded-box p-6 bg-base-100 cursor-pointer group active:scale-99 hover:border-primary border-transparent border-2"
+          class="w-full flex justify-between items-center rounded-box p-6 cursor-pointer group active:scale-[0.99] hover:scale-[1.02] hover:border-primary border-[2px]"
+          :class="
+            global.theme.type == 'light'
+              ? 'border-base-200 bg-base-100'
+              : 'border-transparent bg-base-100'
+          "
         >
           <div class="left flex items-center gap-3">
             <div v-html="icon.svg" class="text-base-content"></div>

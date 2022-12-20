@@ -36,7 +36,7 @@
         <div class="flex gap-4 justify-center">
           <tb-button
             label="Get started"
-            inner-class="btn-primary"
+            inner-class="btn-secondary"
             to="https://github.com/trentbrew/toybox#readme"
             newtab
           />

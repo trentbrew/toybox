@@ -26,7 +26,7 @@
     :class="
       route.path !== '/'
         ? `backdrop-blur-xl bg-base-100 border-base-200 ${
-            state.scroll > 0 ? 'border-b-[2px]' : 'border-b-0'
+            state.scroll > 0 ? 'border-b-[1.5px]' : 'border-b-0'
           }`
         : 'border-b-0'
     "
