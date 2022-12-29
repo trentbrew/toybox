@@ -1,3 +1,5 @@
+// Urgency
+
 prop('Type') == 'Task'
   ? prop('Status') != 'Done'
     ? concat(
@@ -11,3 +13,7 @@ prop('Type') == 'Task'
       )
     : ''
   : ''
+
+  // Urgency String
+
+  concat((not empty(prop("Due")) and prop("Status") != "Cancelled" and not empty(prop("Urgency"))) ? concat(prop("Urgency"), " (", formatDate(prop("Due"), "MM/DD/YY"), ")") : concat(formatDate(prop("Due"), "🗓️ MM/DD/YY")))

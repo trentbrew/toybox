@@ -80,8 +80,9 @@
         <div class="flex gap-3 mt-4">
           <tb-button
             inner-class="btn-primary"
-            label="Contribute"
+            label="GitHub"
             newtab
+            icon="github"
             to="https://github.com/trentbrew/toybox"
           />
           <tb-button
