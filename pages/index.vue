@@ -1,7 +1,10 @@
 <script setup>
   const global = useGlobalStore()
 
+  const route = useRoute()
+
   const state = reactive({
+    search: '',
     code: {
       table: `
         // table.vue
@@ -841,6 +844,7 @@
 
   onMounted(() => {
     global.clearSearch()
+    console.log('route hash: ', route.hash)
   })
 
   function handleButtonAction() {
@@ -850,9 +854,59 @@
   function handleToggle(item) {
     console.log(`${item.name} has been set to ${item.value}`)
   }
+
+  watch(
+    () => global.query,
+    val => {
+      state.search = val
+    }
+  )
 </script>
 
 <template>
+  <div class="w-full hero min-h-[40vh]">
+    <div
+      class="hero-content text-center flex flex-col justify-center items-center"
+    >
+      <div
+        class="max-w-2xl flex flex-col justify-center items-center text-base-content"
+      >
+        <h1 class="text-4xl">toybox components</h1>
+        <p class="py-6">
+          New components are always being added. Feel free to
+          <a
+            class="hover:underline text-primary"
+            href="https://github.com/trentbrew/toybox/issues"
+            target="_blank"
+            >open an issue</a
+          >
+          or
+          <a
+            class="hover:underline text-primary"
+            href="https://github.com/trentbrew/toybox/pulls"
+            target="_blank"
+            >contribute</a
+          >!
+        </p>
+        <div class="flex gap-3 mt-4">
+          <tb-button
+            inner-class="btn-primary"
+            label="View on Github"
+            newtab
+            icon="github"
+            to="https://github.com/trentbrew/toybox"
+          />
+          <tb-button
+            inner-class="btn-outline btn-primary"
+            label="Send Feedback"
+            newtab
+            icon="messages"
+            to="https://trentbrew.com"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
   <main class="w-full grid grid-cols-1 md:grid-cols-2 gap-3">
     <div class="w-full">
       <Showcase title="table">
@@ -973,51 +1027,4 @@
       </Showcase>
     </div>
   </main>
-  <div class="w-full hero min-h-[50vh]">
-    <div
-      class="hero-content text-center flex flex-col justify-center items-center"
-    >
-      <div
-        class="max-w-lg flex flex-col justify-center items-center text-base-content"
-      >
-        <h1 class="text-5xl">toyboxUI</h1>
-        <p class="py-6">
-          Toybox is a collection of icons and Vue components built with
-          <a
-            class="hover:underline text-primary"
-            href="https://nuxt.com/docs/getting-started/introduction"
-            target="_blank"
-            >Nuxt</a
-          >,
-          <a
-            class="hover:underline text-primary"
-            href="https://tailwindcss.com"
-            target="_blank"
-            >TailwindCSS</a
-          >, and
-          <a
-            class="hover:underline text-primary"
-            href="https://daisyui.com"
-            target="_blank"
-            >DaisyUI</a
-          >
-        </p>
-        <div class="flex gap-3 mt-4">
-          <tb-button
-            inner-class="btn-primary"
-            label="GitHub"
-            newtab
-            icon="github"
-            to="https://github.com/trentbrew/toybox"
-          />
-          <tb-button
-            inner-class="btn-outline btn-primary"
-            label="Icons API"
-            to="https://toybox.design/api/v1/icons"
-            icon="globe"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
 </template>

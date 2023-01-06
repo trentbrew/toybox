@@ -1,4 +1,8 @@
 <script setup>
+  const global = useGlobalStore()
+
+  const query = computed(() => global.query)
+
   const props = defineProps({
     title: {
       type: String,
@@ -17,6 +21,8 @@
 
 <template>
   <div
+    :id="props.title"
+    v-show="props.title.includes(query) || query == ''"
     class="rounded-box w-full bg-transparent mb-3 flex flex-col justify-center items-center"
   >
     <div

@@ -3,12 +3,21 @@
 
   const global = useGlobalStore()
 
+  const download = ref(null)
+
   const state = reactive({
     downloading: false,
     blob: null,
     url: '',
     search: '',
     filtered: [],
+  })
+
+  onMounted(() => {
+    global.clearSearch()
+    getFilteredIcons().then(data => {
+      state.filtered = data
+    })
   })
 
   async function getFilteredIcons() {
@@ -22,15 +31,6 @@
           )
       : await api.icons.get()
   }
-
-  onMounted(() => {
-    global.clearSearch()
-    getFilteredIcons().then(data => {
-      state.filtered = data
-    })
-  })
-
-  const download = ref(null)
 
   function downloadSVG(icon) {
     state.downloading = true
@@ -62,26 +62,42 @@
 
 <template>
   <main>
-    <!-- <div class="hero min-h-[50vh]">
+    <div class="w-full hero min-h-[40vh]">
       <div
         class="hero-content text-center flex flex-col justify-center items-center"
       >
         <div
-          class="max-w-xl flex flex-col justify-center items-center text-base-content"
+          class="max-w-2xl flex flex-col justify-center items-center text-base-content"
         >
-          <h1 class="text-5xl">Icons</h1>
+          <h1 class="text-4xl">toybox icons</h1>
           <p class="py-6">
-            SVGs can be downloaded below, or fetched using the API.
+            SVGs can be downloaded, copied to the clipboard, or fetched from the
+            <a
+              class="hover:underline text-primary"
+              href="api/v1/icons"
+              target="_blank"
+              >API</a
+            >
           </p>
-          <tb-button
-            type="primary"
-            label="Explore the API"
-            newtab
-            to="/api/v1/icons"
-          />
+          <div class="flex gap-3 mt-4">
+            <tb-button
+              inner-class="btn-primary"
+              label="Explore the API"
+              icon="globe"
+              to="api/v1/icons"
+              newtab
+            />
+            <tb-button
+              inner-class="btn-outline btn-primary"
+              label="Figma File"
+              icon="figma"
+              to="https://github.com/trentbrew/toybox#example-icon-component-nuxt"
+              newtab
+            />
+          </div>
         </div>
       </div>
-    </div> -->
+    </div>
     <ul class="w-full grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-3">
       <div
         v-for="(icon, index) in state.filtered"
