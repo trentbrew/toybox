@@ -5,6 +5,14 @@
       default: 'title',
     },
   })
+
+  const state = reactive({
+    showCode: false,
+  })
+
+  function toggleCode() {
+    state.showCode = !state.showCode
+  }
 </script>
 
 <template>
@@ -17,12 +25,18 @@
       <h1 class="m-0 text-base font-bold text-base-content">
         {{ props.title }}
       </h1>
-      <tb-button label="</>" type="outline" inner-class="btn-xs" />
+      <tb-button
+        @click="toggleCode"
+        :type="state.showCode ? 'primary' : 'outline'"
+        label="</>"
+        inner-class="btn-xs"
+      />
     </div>
     <div
       class="bg-base-100 w-full rounded-box rounded-t-none flex justify-center items-center p-16"
+      :class="state.showCode && 'flex-col gap-12'"
     >
-      <slot />
+      <slot :name="state.showCode ? 'code' : 'default'" />
     </div>
   </div>
 </template>
