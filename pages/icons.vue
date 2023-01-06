@@ -62,12 +62,12 @@
 
 <template>
   <main>
-    <div class="w-full hero min-h-[40vh]">
+    <div v-show="!state.search" class="w-full hero min-h-[40vh]">
       <div
         class="hero-content text-center flex flex-col justify-center items-center"
       >
         <div
-          class="max-w-2xl flex flex-col justify-center items-center text-base-content"
+          class="max-w-xl flex flex-col justify-center items-center text-base-content"
         >
           <h1 class="text-4xl">toybox icons</h1>
           <p class="py-6">
@@ -89,7 +89,7 @@
             />
             <tb-button
               inner-class="btn-outline btn-primary"
-              label="Figma File"
+              label="View Figma File"
               icon="figma"
               to="https://github.com/trentbrew/toybox#example-icon-component-nuxt"
               newtab

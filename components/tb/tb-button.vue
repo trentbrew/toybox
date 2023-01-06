@@ -28,6 +28,14 @@
       type: String,
       default: null,
     },
+    iconLeft: {
+      type: Boolean,
+      default: true,
+    },
+    iconRight: {
+      type: Boolean,
+      default: false,
+    },
   })
 
   const btnColor = computed(() => (props.type ? ` btn-${props.type}` : ''))
@@ -42,8 +50,16 @@
       :class="props.innerClass + btnColor"
       class="btn flex gap-3 min-w-max"
     >
+      <tb-icon
+        v-show="props.iconLeft || (!props.iconLeft && !props.iconRight)"
+        class="text-inherit"
+        v-if="props.icon || props.newtab"
+        :name="props.icon ? props.icon : props.newtab ? 'open' : 'star_active'"
+        size="18"
+      />
       <span>{{ props.label }}</span>
       <tb-icon
+        v-show="props.iconRight && !props.iconLeft"
         class="text-inherit"
         v-if="props.icon || props.newtab"
         :name="props.icon ? props.icon : props.newtab ? 'open' : 'star_active'"

@@ -864,44 +864,44 @@
 </script>
 
 <template>
-  <div class="w-full hero min-h-[40vh]">
+  <div v-show="!state.search" class="w-full hero min-h-[40vh]">
     <div
       class="hero-content text-center flex flex-col justify-center items-center"
     >
       <div
-        class="max-w-2xl flex flex-col justify-center items-center text-base-content"
+        class="max-w-xl flex flex-col justify-center items-center text-base-content"
       >
         <h1 class="text-4xl">toybox components</h1>
         <p class="py-6">
-          New components are always being added. Feel free to
+          👋🏾 Toybox is a tiny open-source UI kit powered by
           <a
             class="hover:underline text-primary"
-            href="https://github.com/trentbrew/toybox/issues"
+            href="https://nuxt.com/docs/guide"
             target="_blank"
-            >open an issue</a
+            >Nuxt</a
           >
-          or
+          and
           <a
             class="hover:underline text-primary"
-            href="https://github.com/trentbrew/toybox/pulls"
+            href="https://daisyui.com"
             target="_blank"
-            >contribute</a
-          >!
+            >DaisyUI</a
+          >
         </p>
         <div class="flex gap-3 mt-4">
           <tb-button
             inner-class="btn-primary"
-            label="View on Github"
+            label="Contribute"
             newtab
             icon="github"
-            to="https://github.com/trentbrew/toybox"
+            to="https://github.com/trentbrew/toybox#readme"
           />
           <tb-button
             inner-class="btn-outline btn-primary"
-            label="Send Feedback"
+            label="Open an issue"
             newtab
             icon="messages"
-            to="https://trentbrew.com"
+            to="https://github.com/trentbrew/toybox/issues/new"
           />
         </div>
       </div>
