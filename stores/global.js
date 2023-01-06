@@ -1,6 +1,11 @@
 export const useGlobalStore = defineStore('global', {
   state: () => ({
     ui: {
+      toast: {
+        active: false,
+        message: '',
+        type: '',
+      },
       themes: {
         active: {
           name: 'winter',
@@ -78,6 +83,7 @@ export const useGlobalStore = defineStore('global', {
     themes: state => state.ui.themes.all,
     query: state => state.search.query,
     gradientReady: state => !state.ui.gradient.loading,
+    getToast: state => state.ui.toast,
   },
   actions: {
     setTheme(theme) {
@@ -89,6 +95,15 @@ export const useGlobalStore = defineStore('global', {
     },
     setGradientLoading(payload) {
       this.ui.gradient.loading = payload
+    },
+    toast(type, message) {
+      console.log('toast message: ', message)
+      this.ui.toast.active = true
+      this.ui.toast.message = message
+      this.ui.toast.type = type
+      setTimeout(() => {
+        this.ui.toast.active = false
+      }, 3000)
     },
   },
 })

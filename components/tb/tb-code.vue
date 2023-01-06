@@ -1,4 +1,6 @@
 <script setup>
+  const global = useGlobalStore()
+
   const props = defineProps({
     data: {
       type: String,
@@ -8,8 +10,8 @@
   })
 
   function copyCode() {
-    console.log('copied code')
     navigator.clipboard.writeText(props.data)
+    global.toast('info', 'Copied to clipboard')
   }
 </script>
 

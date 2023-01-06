@@ -2,6 +2,8 @@
   const state = reactive({
     code: {
       table: `
+        // table.vue
+
         \<script setup>
           const props = defineProps({
             data: {
@@ -836,7 +838,7 @@
   })
 
   function handleButtonAction() {
-    alert('button clicked 👋🏾')
+    global.toast('info', 'Button clicked')
   }
 
   function handleToggle(item) {

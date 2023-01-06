@@ -42,6 +42,12 @@
     }, 800)
   }
 
+  function copySvg(data) {
+    console.log('copying svg: ', data)
+    navigator.clipboard.writeText(data.svg)
+    global.toast('info', 'Copied SVG to clipboard')
+  }
+
   watch(
     () => global.query,
     val => {
@@ -83,9 +89,8 @@
         :aria-label="`Download ${icon.name}`"
       >
         <li
-          @click="downloadSVG(icon)"
           style="transition: 75ms"
-          class="w-full flex justify-between items-center rounded-box p-6 cursor-pointer group active:scale-[0.99] hover:border-primary border-[2px]"
+          class="w-full flex justify-between items-center rounded-box p-6 cursor-pointer group border-[2px]"
           :class="
             global.theme.type == 'light'
               ? 'border-base-200 bg-base-100'
@@ -98,21 +103,30 @@
               icon.name
             }}</span>
           </div>
-          <div
-            class="opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100 !duration-75 w-6 h-6 flex justify-center items-cenmter"
-          >
-            <!-- <tb-icon name="copy" class="text-primary"></tb-icon> -->
-            <tb-icon
-              v-show="!state.downloading"
-              name="download"
-              class="text-primary"
-            />
-            <tb-loader
-              v-show="state.downloading"
-              type="3"
-              size="24"
-              class="text-primary"
-            />
+          <div class="flex gap-4">
+            <div
+              @click="copySvg(icon)"
+              class="opacity-0 group-hover:opacity-100 !duration-150 w-6 h-6 flex justify-center items-cenmter hover:scale-110 active:scale-90"
+            >
+              <tb-icon name="copy" class="text-primary" />
+            </div>
+            <div
+              @click="downloadSVG(icon)"
+              class="opacity-0 group-hover:opacity-100 !duration-150 w-6 h-6 flex justify-center items-cenmter hover:scale-110 active:scale-90"
+            >
+              <!-- <tb-icon name="copy" class="text-primary"></tb-icon> -->
+              <tb-icon
+                v-show="!state.downloading"
+                name="download"
+                class="text-primary"
+              />
+              <tb-loader
+                v-show="state.downloading"
+                type="3"
+                size="24"
+                class="text-primary"
+              />
+            </div>
           </div>
         </li>
         <a

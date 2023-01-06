@@ -13,6 +13,7 @@
     <Head>
       <Title>toyboxUI</Title>
     </Head>
+    <Toast />
     <NuxtLayout />
   </Html>
 </template>
