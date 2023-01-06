@@ -27,7 +27,7 @@
       </h1>
       <tb-button
         @click="toggleCode"
-        :type="state.showCode ? 'primary' : 'outline'"
+        :type="state.showCode ? 'neutral' : 'outline'"
         label="</>"
         inner-class="btn-xs"
       />

@@ -90,8 +90,13 @@ export const useGlobalStore = defineStore('global', {
       console.log(`Theme set to ${theme.name}`)
       this.ui.themes.active = theme
     },
+    clearSearch() {
+      this.search.query = ''
+      console.log('search cleared')
+    },
     updateQuery(query) {
       this.search.query = query
+      console.log('search query updated: ', query)
     },
     setGradientLoading(payload) {
       this.ui.gradient.loading = payload

@@ -15,7 +15,9 @@
 
   watch(
     () => state.search,
-    val => global.updateQuery(val)
+    val => {
+      global.updateQuery(val)
+    }
   )
 </script>
 
@@ -34,12 +36,12 @@
       <ul class="menu menu-horizontal min-w-fit ml-3">
         <li id="components-link">
           <NuxtLink href="/" class="rounded-box">
-            <span>Components</span>
+            <span>components</span>
           </NuxtLink>
         </li>
         <li id="icons-link">
           <NuxtLink to="/icons" class="rounded-box">
-            <span>Icons</span>
+            <span>icons</span>
           </NuxtLink>
         </li>
       </ul>
@@ -52,10 +54,22 @@
         />
       </label>
       <input
-        v-model="state.search"
+        @input="
+          e => {
+            state.search = e.target.value
+          }
+        "
+        :value="global.query"
         type="text"
         aria-label="Search icon"
-        class="input input-lg pl-16 rounded-box w-full bg-base-200 focus:!outline-none text-base-content"
+        :placeholder="
+          route.path == '/'
+            ? 'Search components'
+            : route.path == '/icons'
+            ? 'Search icons'
+            : ''
+        "
+        class="input input-lg pl-16 text-[16px] rounded-box w-full bg-base-200 focus:!outline-none text-base-content"
       />
     </div>
     <div class="navbar-end hidden lg:flex w-auto">

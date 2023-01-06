@@ -24,6 +24,7 @@
   }
 
   onMounted(() => {
+    global.clearSearch()
     getFilteredIcons().then(data => {
       state.filtered = data
     })
