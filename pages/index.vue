@@ -871,7 +871,7 @@
       <div
         class="max-w-xl flex flex-col justify-center items-center text-base-content"
       >
-        <h1 class="text-4xl">toybox components</h1>
+        <h1 class="text-4xl">Components</h1>
         <p class="py-6">
           👋🏾 Toybox is a tiny open-source UI kit powered by
           <a

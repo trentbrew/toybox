@@ -69,7 +69,7 @@
         <div
           class="max-w-xl flex flex-col justify-center items-center text-base-content"
         >
-          <h1 class="text-4xl">toybox icons</h1>
+          <h1 class="text-4xl">Icons</h1>
           <p class="py-6">
             SVGs can be downloaded, copied to the clipboard, or fetched from the
             <a
