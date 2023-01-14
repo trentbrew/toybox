@@ -71,7 +71,7 @@
       >
         <li
           style="transition: 75ms"
-          class="w-full flex justify-between items-center rounded-box p-6 cursor-pointer group border-[2px]"
+          class="w-full flex justify-between items-center rounded-box p-6 group border-[2px]"
           :class="
             global.theme.type == 'light'
               ? 'border-base-200 bg-base-100'
@@ -87,13 +87,13 @@
           <div class="flex gap-4">
             <div
               @click="copySvg(icon)"
-              class="opacity-0 group-hover:opacity-100 !duration-150 w-6 h-6 flex justify-center items-cenmter hover:scale-110 active:scale-90"
+              class="opacity-0 group-hover:opacity-100 !duration-150 w-6 h-6 flex justify-center items-cenmter hover:scale-110 active:scale-90 cursor-pointer"
             >
               <tb-icon name="copy" class="text-primary" />
             </div>
             <div
               @click="downloadSVG(icon)"
-              class="opacity-0 group-hover:opacity-100 !duration-150 w-6 h-6 flex justify-center items-cenmter hover:scale-110 active:scale-90"
+              class="opacity-0 group-hover:opacity-100 !duration-150 w-6 h-6 flex justify-center items-cenmter hover:scale-110 active:scale-90 cursor-pointer"
             >
               <!-- <tb-icon name="copy" class="text-primary"></tb-icon> -->
               <tb-icon
