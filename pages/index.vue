@@ -864,49 +864,6 @@
 </script>
 
 <template>
-  <div v-show="!state.search" class="w-full hero min-h-[40vh]">
-    <div
-      class="hero-content text-center flex flex-col justify-center items-center"
-    >
-      <div
-        class="max-w-xl flex flex-col justify-center items-center text-base-content"
-      >
-        <h1 class="text-4xl">Components</h1>
-        <p class="py-6">
-          👋🏾 Toybox is a tiny open-source UI kit powered by
-          <a
-            class="hover:underline text-primary"
-            href="https://nuxt.com/docs/guide"
-            target="_blank"
-            >Nuxt</a
-          >
-          and
-          <a
-            class="hover:underline text-primary"
-            href="https://daisyui.com"
-            target="_blank"
-            >DaisyUI</a
-          >
-        </p>
-        <div class="flex gap-3 mt-4">
-          <tb-button
-            inner-class="btn-primary"
-            label="Contribute"
-            newtab
-            icon="github"
-            to="https://github.com/trentbrew/toybox#readme"
-          />
-          <tb-button
-            inner-class="btn-outline btn-primary"
-            label="Open an issue"
-            newtab
-            icon="messages"
-            to="https://github.com/trentbrew/toybox/issues/new"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
   <main class="w-full grid grid-cols-1 md:grid-cols-2 gap-3">
     <div class="w-full">
       <Showcase title="table">

@@ -62,42 +62,6 @@
 
 <template>
   <main>
-    <div v-show="!state.search" class="w-full hero min-h-[40vh]">
-      <div
-        class="hero-content text-center flex flex-col justify-center items-center"
-      >
-        <div
-          class="max-w-xl flex flex-col justify-center items-center text-base-content"
-        >
-          <h1 class="text-4xl">Icons</h1>
-          <p class="py-6">
-            SVGs can be downloaded, copied to the clipboard, or fetched from the
-            <a
-              class="hover:underline text-primary"
-              href="api/v1/icons"
-              target="_blank"
-              >API</a
-            >
-          </p>
-          <div class="flex gap-3 mt-4">
-            <tb-button
-              inner-class="btn-primary"
-              label="Explore the API"
-              icon="globe"
-              to="api/v1/icons"
-              newtab
-            />
-            <tb-button
-              inner-class="btn-outline btn-primary"
-              label="View Figma File"
-              icon="figma"
-              to="https://github.com/trentbrew/toybox#example-icon-component-nuxt"
-              newtab
-            />
-          </div>
-        </div>
-      </div>
-    </div>
     <ul class="w-full grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-3">
       <div
         v-for="(icon, index) in state.filtered"
