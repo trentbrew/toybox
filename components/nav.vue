@@ -33,18 +33,6 @@
       <!-- <a href="https://trentbrew.com" target="_blank"> -->
       <Logo />
       <!-- </a> -->
-      <ul class="menu menu-horizontal min-w-fit ml-3">
-        <li id="components-link">
-          <NuxtLink href="/" class="rounded-box">
-            <span>components</span>
-          </NuxtLink>
-        </li>
-        <li id="icons-link">
-          <NuxtLink to="/icons" class="rounded-box">
-            <span>icons</span>
-          </NuxtLink>
-        </li>
-      </ul>
     </div>
     <div class="w-full mr-6 flex justify-center !duration-300">
       <label>
